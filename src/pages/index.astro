@@ -21,6 +21,37 @@ const experience = [
 ];
 
 const skills = ['PHP','Laravel','REST API design','PostgreSQL','Pest / PHPUnit','Livewire','Vue.js','Nette','Symfony','ElasticSearch','IoT / LoRaWAN','embedded C','Linux'];
+
+const captchaCode = `final class ValidCaptcha implements ValidationRule
+{
+    public function validate(string $attribute, mixed $value, Closure $fail): void
+    {
+        // Fortify runs the validator twice in one request. The response is
+        // single-use server-side, so the second verify would reject a visitor
+        // who already passed. Memoize a success per request, short-circuit it.
+        if ($this->isMemoized($memoKey)) {
+            return;
+        }
+
+        try {
+            $response = Http::asJson()->withToken($secret)
+                ->timeout(Captchaapi::verifyTimeout())
+                ->post(Captchaapi::verifyUrl(), ['response' => $value]);
+        } catch (ConnectionException) {
+            $this->whenUnavailable($fail);   // outage -> fail policy, no retry
+            return;
+        }
+
+        if ($response->serverError()) {      // a 5xx is our fault, not the user's
+            $this->whenUnavailable($fail);
+            return;
+        }
+
+        $response->json('success') === true
+            ? $this->memoize($memoKey)
+            : $fail($this->rejectionMessage());
+    }
+}`;
 ---
 
 <!doctype html>
@@ -97,6 +128,12 @@ const skills = ['PHP','Laravel','REST API design','PostgreSQL','Pest / PHPUnit',
         </div>
       ))}
       <p class="badge">ships across 3 ecosystems: Composer · WordPress.org · npm</p>
+    </div>
+
+    <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">captchaapi/laravel</span> src/Rules/ValidCaptcha.php</span></p>
+    <div class="blk">
+      <pre class="code">{captchaCode}</pre>
+      <p class="meta">Excerpt from <a href="https://github.com/captchaapi/laravel">captchaapi/laravel</a>, my open-source Laravel SDK (Composer · MIT). The small, unglamorous edge cases - handled, and documented for whoever reads it next.</p>
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">git log <span class="flag">--oneline</span> --career</span></p>
@@ -197,6 +234,10 @@ const skills = ['PHP','Laravel','REST API design','PostgreSQL','Pest / PHPUnit',
   .exp .yr{color:var(--dim); font-size:13px}
   .exp .ro{color:var(--fg)} .exp .co{color:var(--teal); font-size:13px}
   .exp .de{color:var(--dim); font-size:13px; grid-column:2}
+
+  .code{margin:2px 0 10px; padding:16px 18px; background:#0f1216; border:1px solid var(--line);
+        border-radius:8px; overflow-x:auto; font-size:12.5px; line-height:1.65; color:#c4cad0;
+        white-space:pre; tab-size:4}
 
   .chips{display:flex; flex-wrap:wrap; gap:7px; margin-top:8px}
   .chip{font-size:12.5px; color:var(--fg); border:1px solid var(--line); padding:2px 9px; border-radius:5px; background:#0f1216}
