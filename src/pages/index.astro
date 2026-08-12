@@ -53,6 +53,28 @@ const captchaCode = `final class ValidCaptcha implements ValidationRule
             : $fail($this->rejectionMessage());
     }
 }`;
+
+const escapeHtml = (value: string) => value
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;');
+
+const highlightPhp = (code: string) => {
+  const tokens = /(?<comment>\/\/.*$)|(?<string>'(?:\\.|[^'\\])*')|(?<variable>\$[A-Za-z_]\w*)|(?<keyword>\b(?:final|class|implements|public|function|string|mixed|void|if|return|try|catch|true)\b)|(?<type>\b(?:Http|Captchaapi|ConnectionException|ValidationRule|Closure)\b)|(?<number>\b\d+\b)/gm;
+  let result = '';
+  let index = 0;
+
+  for (const match of code.matchAll(tokens)) {
+    result += escapeHtml(code.slice(index, match.index));
+    const kind = Object.entries(match.groups ?? {}).find(([, value]) => value)?.[0];
+    result += `<span class="tok-${kind}">${escapeHtml(match[0])}</span>`;
+    index = (match.index ?? 0) + match[0].length;
+  }
+
+  return result + escapeHtml(code.slice(index));
+};
+
+const highlightedCaptchaCode = highlightPhp(captchaCode);
 ---
 
 <!doctype html>
@@ -133,7 +155,7 @@ const captchaCode = `final class ValidCaptcha implements ValidationRule
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">captchaapi/laravel</span> src/Rules/ValidCaptcha.php</span></p>
     <div class="blk">
-      <pre class="code">{captchaCode}</pre>
+      <pre class="code" set:html={highlightedCaptchaCode}></pre>
       <p class="meta">Excerpt from <a href="https://github.com/captchaapi/laravel">captchaapi/laravel</a>, my open-source Laravel SDK (Composer · MIT). The small, unglamorous edge cases - handled, and documented for whoever reads it next.</p>
     </div>
 
@@ -240,6 +262,12 @@ const captchaCode = `final class ValidCaptcha implements ValidationRule
   .code{margin:2px 0 10px; padding:16px 18px; background:#0f1216; border:1px solid var(--line);
         border-radius:8px; overflow-x:auto; font-size:12.5px; line-height:1.65; color:#c4cad0;
         white-space:pre; tab-size:4}
+  .code :global(.tok-comment){color:#69737d; font-style:italic}
+  .code :global(.tok-string){color:#b9d67a}
+  .code :global(.tok-variable){color:#e8a96b}
+  .code :global(.tok-keyword){color:#d998f0}
+  .code :global(.tok-type){color:#62d2bd}
+  .code :global(.tok-number){color:#f0c36b}
 
   .chips{display:flex; flex-wrap:wrap; gap:7px; margin-top:8px}
   .chip{font-size:12.5px; color:var(--fg); border:1px solid var(--line); padding:2px 9px; border-radius:5px; background:#0f1216}
