@@ -23,34 +23,22 @@ const experience = [
 
 const skills = ['PHP','Laravel','REST API design','PostgreSQL','Pest / PHPUnit','Livewire','Vue.js','Nette','ElasticSearch','IoT / LoRaWAN','embedded C','Linux'];
 
-const captchaCode = `final class ValidCaptcha implements ValidationRule
+const releaseCode = `public function activate(string $version): void
 {
-    public function validate(string $attribute, mixed $value, Closure $fail): void
-    {
-        // Fortify runs the validator twice in one request. The response is
-        // single-use server-side, so the second verify would reject a visitor
-        // who already passed. Memoize a success per request, short-circuit it.
-        if ($this->isMemoized($memoKey)) {
-            return;
-        }
+    if (! $this->has($version)) {
+        throw new RuntimeException("release {$version} is not staged");
+    }
 
-        try {
-            $response = Http::asJson()->withToken($secret)
-                ->timeout(Captchaapi::verifyTimeout())
-                ->post(Captchaapi::verifyUrl(), ['response' => $value]);
-        } catch (ConnectionException) {
-            $this->whenUnavailable($fail);   // outage -> fail policy, no retry
-            return;
-        }
+    $tmp = $this->currentLink().'.'.bin2hex(random_bytes(4));
 
-        if ($response->serverError()) {      // a 5xx is our fault, not the user's
-            $this->whenUnavailable($fail);
-            return;
-        }
+    if (! @symlink("releases/{$version}", $tmp)) {
+        throw new RuntimeException("could not create the swap symlink at {$tmp}");
+    }
 
-        $response->json('success') === true
-            ? $this->memoize($memoKey)
-            : $fail($this->rejectionMessage());
+    if (! @rename($tmp, $this->currentLink())) {
+        @unlink($tmp);
+
+        throw new RuntimeException('could not swap the current symlink');
     }
 }`;
 
@@ -60,7 +48,7 @@ const escapeHtml = (value: string) => value
   .replaceAll('>', '&gt;');
 
 const highlightPhp = (code: string) => {
-  const tokens = /(?<comment>\/\/.*$)|(?<string>'(?:\\.|[^'\\])*')|(?<variable>\$[A-Za-z_]\w*)|(?<keyword>\b(?:final|class|implements|public|function|string|mixed|void|if|return|try|catch|true)\b)|(?<type>\b(?:Http|Captchaapi|ConnectionException|ValidationRule|Closure)\b)|(?<number>\b\d+\b)/gm;
+  const tokens = /(?<comment>\/\/.*$)|(?<string>'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*")|(?<variable>\$[A-Za-z_]\w*)|(?<keyword>\b(?:final|class|implements|public|function|string|mixed|void|if|return|try|catch|throw|new)\b)|(?<type>\b(?:RuntimeException)\b)|(?<number>\b\d+\b)/gm;
   let result = '';
   let index = 0;
 
@@ -74,7 +62,7 @@ const highlightPhp = (code: string) => {
   return result + escapeHtml(code.slice(index));
 };
 
-const highlightedCaptchaCode = highlightPhp(captchaCode);
+const highlightedReleaseCode = highlightPhp(releaseCode);
 ---
 
 <!doctype html>
@@ -153,10 +141,10 @@ const highlightedCaptchaCode = highlightPhp(captchaCode);
       <p class="badge">ships across 3 ecosystems: Composer · WordPress.org · npm</p>
     </div>
 
-    <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">captchaapi/laravel</span> src/Rules/ValidCaptcha.php</span></p>
+    <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">exile2exile</span> app/Services/GameDataReleases.php</span></p>
     <div class="blk">
-      <pre class="code" set:html={highlightedCaptchaCode}></pre>
-      <p class="meta">Excerpt from <a href="https://github.com/captchaapi/laravel">captchaapi/laravel</a>, my open-source Laravel SDK (Composer · MIT). The small, unglamorous edge cases - handled, and documented for whoever reads it next.</p>
+      <pre class="code" set:html={highlightedReleaseCode}></pre>
+      <p class="meta">Excerpt from <a href="https://github.com/rajtik76/exile2exile/blob/main/app/Services/GameDataReleases.php#L81-L98">Exile to Exile</a>. Validated game-data releases activate through an atomic symlink swap: every request sees either the prior complete release or the new one, never partial data.</p>
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">git log <span class="flag">--oneline</span> --career</span></p>
