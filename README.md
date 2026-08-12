@@ -21,6 +21,8 @@ Settings:
 - **Redirect:** www → apex (or apex → www, pick one)
 - **SSL:** Let's Encrypt (DNS is unproxied, A/AAAA point at the server)
 
+Deploys automatically from pushes to the `main` branch via the Coolify GitHub webhook.
+
 DNS (already set, unproxied):
 - `A     rajtik.com      178.104.125.70`
 - `AAAA  rajtik.com      2a01:4f8:1c19:2aae::1`
