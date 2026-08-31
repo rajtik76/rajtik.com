@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Vladislav Rajtmajer - CV</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+
+  :root{
+    --ink:#15232b;
+    --accent:#d9783d;
+    --head:#1f6174;
+    --muted:#49555b;
+    --soft:#7d8b92;
+    --rule:#b5cbd1;
+    --bar:#dfe8eb;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    color:var(--ink);
+    font-size:8.8pt;
+    line-height:1.36;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1{
+    font-size:24pt;
+    line-height:1.05;
+    margin:0 0 2px;
+    letter-spacing:-.4px;
+  }
+  .role{
+    color:var(--accent);
+    font-weight:bold;
+    font-size:11pt;
+    margin:0 0 5px;
+  }
+  .contact{ color:var(--muted); margin:0; }
+  .links{ color:var(--head); font-weight:bold; margin:1px 0 0; }
+  .contact .sep, .links .sep{ color:var(--soft); padding:0 3px; }
+
+  h2{
+    color:var(--accent);
+    font-size:9pt;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin:10px 0 0;
+    padding-bottom:2px;
+    border-bottom:1px solid var(--rule);
+  }
+  h2 + *{ margin-top:6px; }
+
+  .summary{
+    border-left:3px solid var(--bar);
+    padding-left:9px;
+    margin:6px 0 0;
+    text-align:justify;
+  }
+
+  .skills{ margin:6px 0 0; }
+  .skills b{ color:var(--head); }
+
+  .job{ margin-top:5px; page-break-inside:avoid; }
+  .job:first-of-type{ margin-top:6px; }
+  .jobhead{ display:flex; align-items:baseline; gap:10px; }
+  .jobtitle{ font-weight:bold; color:var(--head); flex:1; }
+  .when{ color:var(--soft); white-space:nowrap; font-size:8.4pt; }
+  ul{ margin:1px 0 0; padding-left:13px; list-style:none; }
+  li{ position:relative; padding-left:2px; }
+  li::before{
+    content:"\25AA";
+    position:absolute; left:-9px; top:0;
+    color:var(--rule); font-size:7pt;
+  }
+  .tech{ color:var(--soft); font-size:8.4pt; }
+
+  .proj{ margin-top:4px; padding-left:13px; position:relative; page-break-inside:avoid; }
+  .proj::before{
+    content:"\25AA";
+    position:absolute; left:2px; top:1px;
+    color:var(--accent); font-size:8pt;
+  }
+  .proj b{ color:var(--head); }
+
+  .edu{ margin:6px 0 0; }
+  .lang{ color:var(--muted); margin:2px 0 0; }
+</style>
+</head>
+<body>
+
+  <h1>Vladislav Rajtmajer</h1>
+  <p class="role">Embedded C/C++ &amp; PHP Backend Engineer</p>
+  <p class="contact">Plzen, Czech Republic<span class="sep">·</span>Remote, contract (self-employed)<span class="sep">·</span>vladislav.rajtmajer1@gmail.com</p>
+  <p class="links">rajtik.com<span class="sep">·</span>github.com/rajtik76</p>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Engineer working at the seam between hardware and the backend. An earlier decade in embedded
+    and IoT: firmware in C on Atmel AVR and PIC microcontrollers, including a banknote validator,
+    plus binary hardware protocols, telemetry data APIs and LoRaWAN. For the last 12+ years I have
+    built the systems on the other side of that wire, in PHP and Laravel: REST and user-facing API
+    design, PostgreSQL, and a test-first habit with Pest / PHPUnit. Ingesting data from field
+    hardware across many device and payload versions is not a normal CRUD problem, and having
+    written the firmware end makes the backend end better. Years of experience in English-only,
+    SCRUM remote teams. Available for remote contract work across the EU.
+  </p>
+
+  <h2>Core skills</h2>
+  <p class="skills">
+    <b>Embedded:</b> C · C++ · firmware · microcontrollers · Atmel AVR · PIC · SPI · I2C · EEPROM ·
+    binary hardware protocols · IoT / LoRaWAN · telemetry data APIs · electronics<br />
+    <b>Backend:</b> PHP · Laravel · REST API design · PostgreSQL · MySQL · Pest / PHPUnit ·
+    Linux · Docker · Git · CI/CD · Vue.js · React · TypeScript · ElasticSearch
+  </p>
+
+  <h2>Embedded &amp; IoT experience</h2>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Embedded, IoT and Systems Engineering</span>
+      <span class="when">a decade, before 2016</span>
+    </div>
+    <ul>
+      <li>Firmware in C on Atmel AVR and PIC microcontrollers, including a banknote validator.</li>
+      <li>Binary protocols between field hardware and servers; telemetry data APIs; LoRaWAN systems.</li>
+      <li>Linux and Windows server administration; Delphi / FoxPro business applications.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">SignalGenerator - AD9850 DDS on Arduino Uno <span class="tech">(personal project)</span></span>
+      <span class="when">2022</span>
+    </div>
+    <ul>
+      <li>AD9850 DDS driven over SPI, SSD1306 OLED over I2C, rotary encoder with a hand-written debounce class.</li>
+      <li>Frequency edited digit by digit and persisted to EEPROM, so the device resumes after a power cycle.</li>
+      <li class="tech">C++ · Arduino Uno (ATmega328P) · SPI · I2C · EEPROM · github.com/rajtik76/SignalGenerator</li>
+    </ul>
+  </div>
+
+  <h2>Backend &amp; API experience</h2>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP Developer - Freelance (self-employed)</span>
+      <span class="when">2022 - present</span>
+    </div>
+    <ul>
+      <li>Build web applications with REST and user-facing APIs.</li>
+      <li class="tech">Laravel · Livewire · Vue.js · PostgreSQL</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP Developer - UBK s.r.o.</span>
+      <span class="when">2021 - 2022</span>
+    </div>
+    <ul>
+      <li>Laravel development across multiple client products.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Developer - Freelance</span>
+      <span class="when">2018 - 2021</span>
+    </div>
+    <ul>
+      <li>Built a CMS for an international company. SCRUM, English-only daily communication.</li>
+      <li class="tech">PHP 8 · Nette 3.1 · MariaDB</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Developer - MySolutions s.r.o.</span>
+      <span class="when">2016 - 2018</span>
+    </div>
+    <ul>
+      <li>Developed and maintained dating platforms across 12 countries. SCRUM, English-only standups.</li>
+      <li class="tech">PHP · Nette · MySQL</li>
+    </ul>
+  </div>
+
+  <h2>Selected projects &amp; open source</h2>
+
+  <div class="proj">
+    <b>CaptchaAPI</b> - GDPR-first, proof-of-work CAPTCHA for the EU; ships its own Laravel package and WordPress plugin.<br />
+    <span class="tech">Laravel · WordPress · Composer / Packagist</span>
+  </div>
+
+  <div class="proj">
+    <b>Billify</b> - invoicing REST API for the Czech market.<br />
+    <span class="tech">Laravel · REST API · PostgreSQL</span>
+  </div>
+
+  <div class="proj">
+    <b>Exile to Exile</b> - free, open-source Path of Exile 2 companion. Includes automated game-data
+    releases with CI contract tests and safe activation / rollback.<br />
+    <span class="tech">Laravel 13 · PHP 8.4 · React · Inertia · TypeScript · PostgreSQL · Redis</span>
+  </div>
+
+  <div class="proj">
+    <b>POE2 Toolkit</b> - framework-agnostic TypeScript toolkit for binary GGPK archive access and typed
+    game-data extractors; published as MIT npm packages.<br />
+    <span class="tech">TypeScript · React · npm · CI · MIT open source</span>
+  </div>
+
+  <div class="proj">
+    <b>Published packages:</b> captchaapi/laravel (Composer / Packagist), captchaapi (WordPress.org),
+    &#64;poe2-toolkit/* (npm).
+  </div>
+
+  <h2>Education &amp; languages</h2>
+  <p class="edu">Secondary technical school, Maturita - <b>Electronics, Telecommunications and Computing</b>. SPS Ostrov.</p>
+  <p class="lang">English - working proficiency.&nbsp;&nbsp; Czech - native.</p>
+
+</body>
+</html>
