@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Vladislav Rajtmajer - CV</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+
+  :root{
+    --ink:#15232b;
+    --accent:#d9783d;
+    --head:#1f6174;
+    --muted:#49555b;
+    --soft:#7d8b92;
+    --rule:#b5cbd1;
+    --bar:#dfe8eb;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    color:var(--ink);
+    font-size:8.8pt;
+    line-height:1.36;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1{
+    font-size:24pt;
+    line-height:1.05;
+    margin:0 0 2px;
+    letter-spacing:-.4px;
+  }
+  .role{
+    color:var(--accent);
+    font-weight:bold;
+    font-size:11pt;
+    margin:0 0 5px;
+  }
+  .contact{ color:var(--muted); margin:0; }
+  .links{ color:var(--head); font-weight:bold; margin:1px 0 0; }
+  .contact .sep, .links .sep{ color:var(--soft); padding:0 3px; }
+
+  h2{
+    color:var(--accent);
+    font-size:9pt;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin:10px 0 0;
+    padding-bottom:2px;
+    border-bottom:1px solid var(--rule);
+  }
+  h2 + *{ margin-top:6px; }
+
+  .summary{
+    border-left:3px solid var(--bar);
+    padding-left:9px;
+    margin:6px 0 0;
+    text-align:justify;
+  }
+
+  .skills{ margin:6px 0 0; }
+  .skills b{ color:var(--head); }
+
+  .job{ margin-top:5px; page-break-inside:avoid; }
+  .job:first-of-type{ margin-top:6px; }
+  .jobhead{ display:flex; align-items:baseline; gap:10px; }
+  .jobtitle{ font-weight:bold; color:var(--head); flex:1; }
+  .when{ color:var(--soft); white-space:nowrap; font-size:8.4pt; }
+  ul{ margin:1px 0 0; padding-left:13px; list-style:none; }
+  li{ position:relative; padding-left:2px; }
+  li::before{
+    content:"\25AA";
+    position:absolute; left:-9px; top:0;
+    color:var(--rule); font-size:7pt;
+  }
+  .tech{ color:var(--soft); font-size:8.4pt; }
+
+  .proj{ margin-top:4px; padding-left:13px; position:relative; page-break-inside:avoid; }
+  .proj::before{
+    content:"\25AA";
+    position:absolute; left:2px; top:1px;
+    color:var(--accent); font-size:8pt;
+  }
+  .proj b{ color:var(--head); }
+
+  .edu{ margin:6px 0 0; }
+  .lang{ color:var(--muted); margin:2px 0 0; }
+
+  /* Match the original cv.pdf look */
+  body{ font-size:9.4pt; }
+  h2{ color:var(--head); border-bottom:1px solid var(--accent); }
+  .summary{ border-left-color:var(--accent); }
+  .jobtitle{ color:var(--ink); }
+  li::before{ content:"\2022"; color:var(--ink); font-size:9pt; }
+  .edu b{ font-weight:normal; }
+</style>
+</head>
+<body>
+
+  <h1>Vladislav Rajtmajer</h1>
+  <p class="role">Senior PHP / Laravel Engineer</p>
+  <p class="contact">Plzen, Czech Republic<span class="sep">·</span>Remote, contract (self-employed)<span class="sep">·</span>vladislav.rajtmajer1@gmail.com</p>
+  <p class="links">rajtik.com<span class="sep">·</span>github.com/rajtik76</p>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Senior PHP/Laravel engineer with 12+ years building web applications and backend systems. Focused on Laravel,
+    REST and user-facing API design, and PostgreSQL, with a test-first habit (Pest / PHPUnit, high coverage from day
+    one). An earlier decade in embedded and IoT (binary hardware protocols, telemetry APIs, firmware in C) still
+    shapes how I design data interfaces. Years of experience in English-only, SCRUM remote teams. Available for
+    long-term remote contract work on a modern PHP/Laravel stack.
+  </p>
+
+  <h2>Core skills</h2>
+  <p class="skills">
+    PHP · Laravel · REST API design · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
+    Inertia · Nette · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)
+  </p>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP Developer - Freelance (self-employed)</span>
+      <span class="when">2022 - present</span>
+    </div>
+    <ul>
+      <li>Build web applications with REST and user-facing APIs.</li>
+      <li>Stack: Laravel, Livewire, Vue.js, PostgreSQL.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP Developer - UBK s.r.o.</span>
+      <span class="when">2021 - 2022</span>
+    </div>
+    <ul>
+      <li>Laravel development across multiple client products.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Developer - Freelance</span>
+      <span class="when">2018 - 2021</span>
+    </div>
+    <ul>
+      <li>Built a CMS for an international company. SCRUM, English-only daily communication.</li>
+      <li>PHP 8, Nette 3.1, MariaDB.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Developer - MySolutions s.r.o.</span>
+      <span class="when">2016 - 2018</span>
+    </div>
+    <ul>
+      <li>Developed and maintained dating platforms across 12 countries. SCRUM, English-only standups.</li>
+      <li>PHP, Nette, MySQL.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Earlier - Embedded, IoT and Systems Engineering</span>
+    </div>
+    <ul>
+      <li>Firmware in C (Atmel AVR / PIC), including a banknote validator; telemetry data APIs.</li>
+      <li>Linux and Windows server administration; Delphi / FoxPro business applications.</li>
+    </ul>
+  </div>
+
+  <h2>Selected projects &amp; open source</h2>
+
+  <div class="proj">
+    <b>CaptchaAPI</b> - GDPR-first, proof-of-work CAPTCHA for the EU; ships its own Laravel package and WordPress plugin.<br />
+    <span class="tech">Laravel · WordPress · Composer / Packagist</span>
+  </div>
+
+  <div class="proj">
+    <b>Billify</b> - invoicing REST API for the Czech market.<br />
+    <span class="tech">Laravel · REST API · PostgreSQL</span>
+  </div>
+
+  <div class="proj">
+    <b>Exile to Exile</b> - free, open-source Path of Exile 2 companion: build planner, passive-tree tools, loot-filter generator
+    and shareable builds. Includes automated game-data releases with CI contract tests and safe activation/rollback.<br />
+    <span class="tech">Laravel 13 · PHP 8.4 · React · Inertia · TypeScript · PostgreSQL · Redis</span>
+  </div>
+
+  <div class="proj">
+    <b>POE2 Toolkit</b> - framework-agnostic TypeScript toolkit for GGPK access, typed game-data extractors and a
+    headless passive-tree geometry engine with a React renderer; published as MIT npm packages and used by Exile to Exile.<br />
+    <span class="tech">TypeScript · React · npm · CI · MIT open source</span>
+  </div>
+
+  <div class="proj">
+    <b>Weather Station</b> - home weather station, end to end: ESP32 firmware uploads ten-minute sensor windows to a
+    Laravel ingest API, drawn in a Livewire dashboard. Running at weather.rajtik.com.<br />
+    <span class="tech">Laravel · Livewire · PostgreSQL · ESP32 · C++ · github.com/rajtik76/weather-station</span>
+  </div>
+
+  <div class="proj">
+    <b>laravel-blog.cz</b> - Czech-language blog where I write about Laravel and day-to-day backend engineering.<br />
+    <span class="tech">laravel-blog.cz</span>
+  </div>
+
+  <div class="proj">
+    <b>Published packages:</b> captchaapi/laravel (Composer / Packagist), captchaapi (WordPress.org),
+    &#64;poe2-toolkit/* (npm).
+  </div>
+
+  <h2>Education &amp; languages</h2>
+  <p class="edu">Secondary technical school, Maturita - <b>Electronics, Telecommunications and Computing</b>. SPS Ostrov.</p>
+  <p class="lang">English - working proficiency.&nbsp;&nbsp; Czech - native.</p>
+
+</body>
+</html>
