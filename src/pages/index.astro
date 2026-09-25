@@ -1,11 +1,11 @@
 ---
 const projects = [
-  { name: 'SignalGenerator', tag: 'embedded C++ · AVR',   href: 'https://github.com/rajtik76/SignalGenerator', body: 'DDS signal generator on an Arduino Uno: AD9850 driven over SPI, SSD1306 OLED over I2C, rotary encoder with a hand-written debounce class, frequency persisted in EEPROM. Hobby build.' },
   { name: 'CaptchaAPI',     tag: 'privacy CAPTCHA · EU',   href: 'https://captchaapi.eu',                    body: 'Proof-of-work CAPTCHA, GDPR-first. No tracking, no Google. Ships with its own Laravel package and WordPress plugin.' },
   { name: 'Billify',        tag: 'invoicing API · CZ',     href: 'https://billify.cz',                       body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software." },
   { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel, React and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
   { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine with a React renderer. Used by Exile to Exile.' },
   { name: 'laravel-blog.cz', tag: 'writing · CZ',          href: 'https://laravel-blog.cz',                  body: 'A Czech-language blog where I write about Laravel and day-to-day backend engineering.' },
+  { name: 'SignalGenerator', tag: 'embedded C++ · AVR',   href: 'https://github.com/rajtik76/SignalGenerator', body: 'DDS signal generator on an Arduino Uno: AD9850 driven over SPI, SSD1306 OLED over I2C, rotary encoder with a hand-written debounce class, frequency persisted in EEPROM. Hobby build.' },
 ];
 
 const packages = [
@@ -22,7 +22,7 @@ const experience = [
   { yr: 'before 2016', role: 'Embedded, IoT & systems engineering', org: null,      desc: 'A decade of firmware in C (Atmel AVR / PIC) incl. a banknote validator, binary hardware protocols, telemetry APIs, LoRaWAN; Linux/Windows servers; Delphi/FoxPro business apps.' },
 ];
 
-const skills = ['embedded C','C','C++','firmware','microcontrollers','Atmel AVR / PIC','IoT / LoRaWAN','telemetry','Linux','PHP','Laravel','REST API design','PostgreSQL','Pest / PHPUnit','Vue.js','ElasticSearch'];
+const skills = ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','Docker','Linux','embedded C','IoT / LoRaWAN'];
 
 const releaseCode = `public function activate(string $version): void
 {
@@ -71,19 +71,19 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vladislav Rajtmajer - Embedded C/C++ and PHP Backend Engineer</title>
-<meta name="description" content="Embedded and backend engineer. Firmware in C on Atmel AVR and PIC, telemetry APIs and LoRaWAN, plus 12+ years of PHP/Laravel backends. Available for remote contracting in the EU." />
+<title>Vladislav Rajtmajer - Senior PHP / Laravel Engineer</title>
+<meta name="description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
 <link rel="canonical" href="https://rajtik.com/" />
-<meta property="og:title" content="Vladislav Rajtmajer - Embedded C/C++ and PHP Backend Engineer" />
-<meta property="og:description" content="Embedded and backend engineer. Firmware in C on Atmel AVR and PIC, telemetry APIs and LoRaWAN, plus 12+ years of PHP/Laravel backends. Available for remote contracting in the EU." />
+<meta property="og:title" content="Vladislav Rajtmajer - Senior PHP / Laravel Engineer" />
+<meta property="og:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rajtik.com/" />
 <meta property="og:image" content="https://rajtik.com/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Vladislav Rajtmajer - Embedded C/C++ and PHP Backend Engineer" />
-<meta name="twitter:description" content="Embedded and backend engineer. Firmware in C on Atmel AVR and PIC, telemetry APIs and LoRaWAN, plus 12+ years of PHP/Laravel backends. Available for remote contracting in the EU." />
+<meta name="twitter:title" content="Vladislav Rajtmajer - Senior PHP / Laravel Engineer" />
+<meta name="twitter:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
 <meta name="twitter:image" content="https://rajtik.com/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,30 +100,24 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">whoami</span></p>
     <div class="blk">
       <h1>Vladislav Rajtmajer</h1>
-      <p class="role">Embedded C/C++ &amp; PHP Backend Engineer</p>
+      <p class="role">Senior PHP / Laravel Engineer</p>
       <p class="meta">Plzeň, Czech Republic · remote · contract (IČO)</p>
       <p class="avail"><span class="ok"></span> available now for new contracts</p>
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">about.md</span></span></p>
     <div class="blk out">
-      I work at the seam between hardware and the backend.
+      12+ years building web applications and backend systems. I work mostly in
+      Laravel: REST and user-facing API design, PostgreSQL, queues, and the
+      boring reliability work that keeps APIs predictable. On the frontend I
+      build with Livewire and Vue.js.
       <br /><br />
-      An earlier decade was embedded and IoT: firmware in C on Atmel AVR and PIC
-      microcontrollers, including a banknote validator, plus binary protocols
-      between hardware and servers, telemetry pipelines and LoRaWAN.
+      Before the web I spent a decade in embedded and IoT, writing firmware in C
+      for Atmel AVR and PIC, binary protocols and telemetry pipelines. That is
+      where I learned to keep data contracts strict and to treat edge cases as
+      the normal case.
       <br /><br />
-      For the last 12+ years I have built the systems on the other side of that
-      wire: PHP and Laravel backends, REST and user-facing API design,
-      PostgreSQL, and the boring reliability work that keeps APIs predictable.
-      <br /><br />
-      The combination is the point. Ingesting data from field hardware across
-      many device and payload versions is not a normal CRUD problem: the
-      upstream is messy, the contracts have to be strict, and edge cases are the
-      normal case rather than an afterthought. Having written the firmware end
-      makes the backend end better.
-      <br /><br />
-      <span class="dim"># Open to long-term remote contracts: embedded C/C++, telemetry backends, or PHP/Laravel.</span>
+      <span class="dim"># Open to long-term remote contracts on a modern PHP/Laravel stack.</span>
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">ls <span class="flag">projects/</span></span></p>
@@ -185,9 +179,7 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cv <span class="flag">--download</span></span></p>
     <div class="blk out">
-      <a href="/cv-embedded.pdf" download="Vladislav-Rajtmajer-CV-Embedded.pdf">CV - embedded C/C++ &amp; backend</a> ·
-      <a href="/cv.pdf" download="Vladislav-Rajtmajer-CV.pdf">CV - PHP / Laravel backend</a>
-      <br /><span class="dim"># same career, two emphases. Both PDF, English.</span>
+      <a href="/cv.pdf" download="Vladislav-Rajtmajer-CV.pdf">Download CV (PDF, English)</a>
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cursor"></span></p>
