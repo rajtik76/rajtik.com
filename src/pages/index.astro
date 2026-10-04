@@ -1,11 +1,22 @@
 ---
 const projects = [
   { name: 'CaptchaAPI',     tag: 'privacy CAPTCHA · EU',   href: 'https://captchaapi.eu', repo: 'https://github.com/captchaapi/laravel', body: 'Proof-of-work CAPTCHA, GDPR-first. No tracking, no Google. Ships with its own Laravel package and WordPress plugin.' },
-  { name: 'Billify',        tag: 'invoicing API · CZ',     href: 'https://billify.cz',                       body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software." },
+  { name: 'Billify',        tag: 'invoicing API · LLM · CZ', href: 'https://billify.cz',                     body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software. An LLM reads received PDF invoices into the monthly VAT return." },
   { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel, React and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
   { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine with a React renderer. Used by Exile to Exile.' },
   { name: 'laravel-blog.cz', tag: 'writing · CZ',          href: 'https://laravel-blog.cz',                  body: 'A Czech-language blog where I write about Laravel and day-to-day backend engineering.' },
-  { name: 'Weather Station', tag: 'Laravel · Livewire · IoT', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Home weather station, end to end: ESP32 firmware uploads ten-minute sensor windows to a Laravel ingest API on PostgreSQL, drawn in a Livewire dashboard.' },
+  { name: 'Weather Station', tag: 'ESP32 · Laravel · ML', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Home weather station, end to end. ESP32 firmware in C++ reads four sensors over I2C and I2S, hears rain in the microphone spectrum and keeps a day of readings on flash when the network drops; schematics in KiCad. A Laravel ingest API stores it in PostgreSQL and a model trained on eight years of Czech Hydrometeorological Institute (ČHMÚ) records forecasts the next six hours.' },
+];
+
+const ai = [
+  { name: 'Billify', href: 'https://laravel-blog.cz/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
+    desc: 'Claude reads supplier PDF invoices into a typed schema: structured output, temperature 0. The exchange rate of the Czech National Bank (ČNB) comes from a tool backed by my own rate service, never from the model. Anything ambiguous lands in a review note and a human confirms every row. Per-team quota, audit log, the cheapest model that holds up (about $0.01 per PDF).' },
+  { name: 'Weather Station', href: 'https://github.com/rajtik76/weather-station/tree/main/forecast', tag: 'trained ML model',
+    desc: 'Gradient-boosting models (scikit-learn) trained on 1.7 million hourly examples from 32 stations of the Czech Hydrometeorological Institute (ČHMÚ). Six hours ahead they miss by 1.38 °C, against 3.66 °C for "nothing changes", on stations they never saw. Every live forecast is scored against that baseline and the page publishes the verdict, good or bad.' },
+  { name: 'pis-cesky', href: 'https://github.com/rajtik76/pis-cesky', tag: 'open-source Claude Code plugin',
+    desc: 'Teaches the model to write Czech that does not read like a translation. Not a blacklist of phrases: rules derived from human-written Czech, and a proofreading agent that never sees the brief, so it judges only the text.' },
+  { name: 'Daily workflow', href: 'https://laravel-blog.cz/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
+    desc: 'AI writes a lot of my code; Pest tests and PHPStan decide when it is done, not the model. I measure what it costs (token audits) and write about where it fails on laravel-blog.cz.' },
 ];
 
 const packages = [
@@ -23,7 +34,7 @@ const experience = [
   { yr: 'before 2013', role: 'Embedded, IoT & systems engineering', org: null,      desc: 'A decade of firmware in C (Atmel AVR / PIC) incl. a banknote validator, binary hardware protocols, telemetry APIs, LoRaWAN; Linux/Windows servers; Delphi/FoxPro business apps.' },
 ];
 
-const skills = ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','Docker','Linux','embedded C','IoT / LoRaWAN'];
+const skills = ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Python / scikit-learn','Docker','Linux','embedded C','IoT / LoRaWAN'];
 
 const releaseCode = `public function activate(string $version): void
 {
@@ -73,10 +84,10 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vladislav Rajtmajer - Senior PHP / Laravel Engineer</title>
-<meta name="description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
+<meta name="description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU." />
 <link rel="canonical" href="https://rajtik.com/" />
 <meta property="og:title" content="Vladislav Rajtmajer - Senior PHP / Laravel Engineer" />
-<meta property="og:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
+<meta property="og:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rajtik.com/" />
 <meta property="og:image" content="https://rajtik.com/og.png" />
@@ -84,7 +95,7 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Vladislav Rajtmajer - Senior PHP / Laravel Engineer" />
-<meta name="twitter:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js. Available for remote contracting in the EU." />
+<meta name="twitter:description" content="Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU." />
 <meta name="twitter:image" content="https://rajtik.com/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,7 +129,22 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
       where I learned to keep data contracts strict and to treat edge cases as
       the normal case.
       <br /><br />
+      I use AI every day, in the products and in the editor, and I know where it
+      breaks. So the model gets a strict schema and the boring tools, and the
+      tests, not the model, say when the work is done.
+      <br /><br />
       <span class="dim"># Open to long-term remote contracts on a modern PHP/Laravel stack.</span>
+    </div>
+
+    <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cat <span class="flag">ai.md</span> --in-production</span></p>
+    <div class="blk">
+      {ai.map((a) => (
+        <div class="ai">
+          <span class="nm"><a href={a.href}>{a.name}</a></span>
+          <span class="tg">{a.tag}</span>
+          <span class="de">{a.desc}</span>
+        </div>
+      ))}
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">ls <span class="flag">projects/</span></span></p>
@@ -257,6 +283,11 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
   .exp .ro{color:var(--fg)} .exp .co{color:var(--teal); font-size:13px}
   .exp .de{color:var(--dim); font-size:13px; grid-column:2}
 
+  .ai{display:grid; grid-template-columns:150px 1fr; gap:2px 18px; padding:10px 0; border-top:1px solid var(--line)}
+  .ai:first-of-type{border-top:0}
+  .ai .tg{color:var(--amber); font-size:12.5px}
+  .ai .de{color:var(--dim); font-size:13px; grid-column:2; line-height:1.6}
+
   .code{margin:2px 0 10px; padding:16px 18px; background:#0f1216; border:1px solid var(--line);
         border-radius:8px; overflow-x:auto; font-size:12.5px; line-height:1.65; color:#c4cad0;
         white-space:pre; tab-size:4}
@@ -276,6 +307,8 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
     .grid{grid-template-columns:1fr}
     .exp{grid-template-columns:1fr}
     .exp .de{grid-column:1}
+    .ai{grid-template-columns:1fr}
+    .ai .de{grid-column:1}
     .term{margin:20px auto; border-radius:0; border-left:0; border-right:0}
   }
 </style>
