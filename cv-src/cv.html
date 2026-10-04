@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Vladislav Rajtmajer - CV</title>
 <style>
-  @page { size: A4; margin: 12mm 14mm; }
+  @page { size: A4; margin: 10mm 14mm; }
 
   :root{
     --ink:#15232b;
@@ -22,7 +22,7 @@
     font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
     color:var(--ink);
     font-size:8.8pt;
-    line-height:1.36;
+    line-height:1.3;
     -webkit-font-smoothing:antialiased;
   }
 
@@ -47,7 +47,7 @@
     font-size:9pt;
     letter-spacing:1.6px;
     text-transform:uppercase;
-    margin:10px 0 0;
+    margin:8px 0 0;
     padding-bottom:2px;
     border-bottom:1px solid var(--rule);
   }
@@ -86,10 +86,12 @@
   .proj b{ color:var(--head); }
 
   .edu{ margin:6px 0 0; }
+  ul.ai{ margin-top:6px; }
+  ul.ai li + li{ margin-top:2px; }
   .lang{ color:var(--muted); margin:2px 0 0; }
 
   /* Match the original cv.pdf look */
-  body{ font-size:9.4pt; }
+  body{ font-size:9.1pt; }
   h2{ color:var(--head); border-bottom:1px solid var(--accent); }
   .summary{ border-left-color:var(--accent); }
   .jobtitle{ color:var(--ink); }
@@ -109,14 +111,16 @@
     Senior PHP/Laravel engineer with 12+ years building web applications and backend systems. Focused on Laravel,
     REST and user-facing API design, and PostgreSQL, with a test-first habit (Pest / PHPUnit, high coverage from day
     one). An earlier decade in embedded and IoT (binary hardware protocols, telemetry APIs, firmware in C) still
-    shapes how I design data interfaces. Years of experience in English-only, SCRUM remote teams. Available for
+    shapes how I design data interfaces. I use AI daily, in production features and in development, with guardrails:
+    strict schemas, deterministic tools, tests as the definition of done. Years of experience in English-only, SCRUM remote teams. Available for
     long-term remote contract work on a modern PHP/Laravel stack.
   </p>
 
   <h2>Core skills</h2>
   <p class="skills">
     PHP · Laravel · REST API design · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
-    Inertia · Nette · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)
+    Inertia · Nette · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)<br />
+    <b>AI:</b> LLM integration (Claude, laravel/ai, structured output, tool use) · Claude Code · Python / scikit-learn
   </p>
 
   <h2>Experience</h2>
@@ -127,8 +131,7 @@
       <span class="when">2022 - present</span>
     </div>
     <ul>
-      <li>Build web applications with REST and user-facing APIs.</li>
-      <li>Stack: Laravel, Livewire, Vue.js, PostgreSQL.</li>
+      <li>Build web applications with REST and user-facing APIs. Laravel, Livewire, Vue.js, PostgreSQL.</li>
     </ul>
   </div>
 
@@ -148,8 +151,7 @@
       <span class="when">2018 - 2021</span>
     </div>
     <ul>
-      <li>Built a CMS for an international company. SCRUM, English-only daily communication.</li>
-      <li>PHP 8, Nette 3.1, MariaDB.</li>
+      <li>Built a CMS for an international company. SCRUM, English-only daily communication. PHP 8, Nette 3.1, MariaDB.</li>
     </ul>
   </div>
 
@@ -159,8 +161,7 @@
       <span class="when">2016 - 2018</span>
     </div>
     <ul>
-      <li>Developed and maintained dating platforms across 12 countries. SCRUM, English-only standups.</li>
-      <li>PHP, Nette, MySQL.</li>
+      <li>Developed and maintained dating platforms across 12 countries. SCRUM, English-only standups. PHP, Nette, MySQL.</li>
     </ul>
   </div>
 
@@ -184,6 +185,16 @@
     </ul>
   </div>
 
+  <h2>Applied AI</h2>
+  <ul class="ai">
+    <li><b>Billify</b> - Claude extracts supplier PDF invoices for the VAT return (structured output, temperature 0). The Czech
+      National Bank (ČNB) rate comes from a tool, not the model; a human confirms every row. ~$0.01 per PDF.</li>
+    <li><b>Weather Station</b> - ML forecast (scikit-learn) trained on 8 years of Czech Hydrometeorological Institute (ČHMÚ) data;
+      6 h ahead it misses by 1.38 °C vs 3.66 °C for persistence. Live forecasts are scored publicly.</li>
+    <li><b>pis-cesky</b> - open-source Claude Code plugin that makes AI write natural Czech: rules derived from human-written text
+      and a proofreading agent that never sees the brief. github.com/rajtik76/pis-cesky</li>
+  </ul>
+
   <h2>Selected projects &amp; open source</h2>
 
   <div class="proj">
@@ -192,8 +203,8 @@
   </div>
 
   <div class="proj">
-    <b>Billify</b> - invoicing REST API for the Czech market.<br />
-    <span class="tech">Laravel · REST API · PostgreSQL</span>
+    <b>Billify</b> - invoicing REST API for the Czech market, with an AI-assisted VAT return module.<br />
+    <span class="tech">Laravel · REST API · PostgreSQL · laravel/ai</span>
   </div>
 
   <div class="proj">
@@ -209,19 +220,13 @@
   </div>
 
   <div class="proj">
-    <b>Weather Station</b> - home weather station, end to end: ESP32 firmware uploads ten-minute sensor windows to a
-    Laravel ingest API, drawn in a Livewire dashboard. Running at weather.rajtik.com.<br />
-    <span class="tech">Laravel · Livewire · PostgreSQL · ESP32 · C++ · github.com/rajtik76/weather-station</span>
+    <b>Weather Station</b> - end to end: ESP32 firmware in C++ (I2C / I2S sensors, rain from the microphone spectrum, offline
+    buffer on flash, KiCad schematics), Laravel ingest API, Livewire dashboard, Python forecast. Live at weather.rajtik.com.<br />
+    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · Python · github.com/rajtik76/weather-station</span>
   </div>
 
   <div class="proj">
-    <b>laravel-blog.cz</b> - Czech-language blog where I write about Laravel and day-to-day backend engineering.<br />
-    <span class="tech">laravel-blog.cz</span>
-  </div>
-
-  <div class="proj">
-    <b>Published packages:</b> captchaapi/laravel (Composer / Packagist), captchaapi (WordPress.org),
-    &#64;poe2-toolkit/* (npm).
+    <b>laravel-blog.cz</b> - Czech-language blog about Laravel, backend engineering and AI-assisted development.
   </div>
 
   <h2>Education &amp; languages</h2>
