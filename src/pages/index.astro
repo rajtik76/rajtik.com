@@ -5,14 +5,12 @@ const projects = [
   { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel, React and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
   { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine with a React renderer. Used by Exile to Exile.' },
   { name: 'laravel-blog.cz', tag: 'writing · CZ',          href: 'https://laravel-blog.cz',                  body: 'A Czech-language blog where I write about Laravel and day-to-day backend engineering.' },
-  { name: 'Weather Station', tag: 'ESP32 · Laravel · ML', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Home weather station, end to end. ESP32 firmware in C++ reads four sensors over I2C and I2S, hears rain in the microphone spectrum and keeps a day of readings on flash when the network drops; schematics in KiCad. A Laravel ingest API stores it in PostgreSQL and a model trained on eight years of Czech Hydrometeorological Institute (ČHMÚ) records forecasts the next six hours.' },
+  { name: 'Weather Station', tag: 'ESP32 · Laravel · PostgreSQL', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Balcony weather station, end to end. ESP32 firmware in C++ reads four sensors over I2C and I2S, hears rain in the microphone spectrum and keeps a day of readings on flash when the network drops; schematics in KiCad. A Laravel ingest API stores it in PostgreSQL. Sun heats the radiation shield, so a regression model calibrated against the Czech Hydrometeorological Institute (ČHMÚ) station Plzeň-Mikulka subtracts that heating from light and sun position. It only goes live after it beats the raw sensor on days it never saw.' },
 ];
 
 const ai = [
   { name: 'Billify', href: 'https://laravel-blog.cz/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
     desc: 'Claude reads supplier PDF invoices into a typed schema: structured output, temperature 0. The exchange rate of the Czech National Bank (ČNB) comes from a tool backed by my own rate service, never from the model. Anything ambiguous lands in a review note and a human confirms every row. Per-team quota, audit log, the cheapest model that holds up (about $0.01 per PDF).' },
-  { name: 'Weather Station', href: 'https://github.com/rajtik76/weather-station/tree/main/forecast', tag: 'trained ML model',
-    desc: 'Gradient-boosting models (scikit-learn) trained on 1.7 million hourly examples from 32 stations of the Czech Hydrometeorological Institute (ČHMÚ). Six hours ahead they miss by 1.38 °C, against 3.66 °C for "nothing changes", on stations they never saw. Every live forecast is scored against that baseline and the page publishes the verdict, good or bad.' },
   { name: 'pis-cesky', href: 'https://github.com/rajtik76/pis-cesky', tag: 'open-source Claude Code plugin',
     desc: 'Teaches the model to write Czech that does not read like a translation. Not a blacklist of phrases: rules derived from human-written Czech, and a proofreading agent that never sees the brief, so it judges only the text.' },
   { name: 'Daily workflow', href: 'https://laravel-blog.cz/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
@@ -34,7 +32,7 @@ const experience = [
   { yr: 'before 2013', role: 'Embedded, IoT & systems engineering', org: null,      desc: 'A decade of firmware in C (Atmel AVR / PIC) incl. a banknote validator, binary hardware protocols, telemetry APIs, LoRaWAN; Linux/Windows servers; Delphi/FoxPro business apps.' },
 ];
 
-const skills = ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Python / scikit-learn','Docker','Linux','embedded C','IoT / LoRaWAN'];
+const skills = ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Docker','Linux','embedded C','IoT / LoRaWAN'];
 
 const releaseCode = `public function activate(string $version): void
 {
