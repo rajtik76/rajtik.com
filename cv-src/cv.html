@@ -120,7 +120,7 @@
   <p class="skills">
     PHP · Laravel · REST API design · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
     Inertia · Nette · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)<br />
-    <b>AI:</b> LLM integration (Claude, laravel/ai, structured output, tool use) · Claude Code · Python / scikit-learn
+    <b>AI:</b> LLM integration (Claude, laravel/ai, structured output, tool use) · Claude Code
   </p>
 
   <h2>Experience</h2>
@@ -189,8 +189,6 @@
   <ul class="ai">
     <li><b>Billify</b> - Claude extracts supplier PDF invoices for the VAT return (structured output, temperature 0). The Czech
       National Bank (ČNB) rate comes from a tool, not the model; a human confirms every row. ~$0.01 per PDF.</li>
-    <li><b>Weather Station</b> - ML forecast (scikit-learn) trained on 8 years of Czech Hydrometeorological Institute (ČHMÚ) data;
-      6 h ahead it misses by 1.38 °C vs 3.66 °C for persistence. Live forecasts are scored publicly.</li>
     <li><b>pis-cesky</b> - open-source Claude Code plugin that makes AI write natural Czech: rules derived from human-written text
       and a proofreading agent that never sees the brief. github.com/rajtik76/pis-cesky</li>
   </ul>
@@ -221,8 +219,10 @@
 
   <div class="proj">
     <b>Weather Station</b> - end to end: ESP32 firmware in C++ (I2C / I2S sensors, rain from the microphone spectrum, offline
-    buffer on flash, KiCad schematics), Laravel ingest API, Livewire dashboard, Python forecast. Live at weather.rajtik.com.<br />
-    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · Python · github.com/rajtik76/weather-station</span>
+    buffer on flash, KiCad schematics), Laravel ingest API, Livewire dashboard. A regression model calibrated against Czech
+    Hydrometeorological Institute (ČHMÚ) data removes solar heating of the radiation shield; validated on held-out days.
+    Live at weather.rajtik.com.<br />
+    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · github.com/rajtik76/weather-station</span>
   </div>
 
   <div class="proj">
