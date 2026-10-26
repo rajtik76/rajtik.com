@@ -17,12 +17,12 @@ const en = {
   aboutNote: '# Open to long-term remote contracts on a modern PHP/Laravel stack.',
 
   ai: [
-    { name: 'Billify', href: 'https://laravel-blog.cz/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
+    { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
       desc: 'Claude reads supplier PDF invoices into a typed schema: structured output, temperature 0. The exchange rate of the Czech National Bank (ČNB) comes from a tool backed by my own rate service, never from the model. Anything ambiguous lands in a review note and a human confirms every row. Per-team quota, audit log, the cheapest model that holds up (about $0.01 per PDF).' },
     { name: 'pis-cesky', href: 'https://github.com/rajtik76/pis-cesky', tag: 'open-source Claude Code plugin',
       desc: 'Teaches the model to write Czech that does not read like a translation. Not a blacklist of phrases: rules derived from human-written Czech, and a proofreading agent that never sees the brief, so it judges only the text.' },
-    { name: 'Daily workflow', href: 'https://laravel-blog.cz/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
-      desc: 'AI is one of my tools, not the author. When it helps, I use it to analyse a codebase, weigh options, review a change or take over routine work. Design and decisions stay with me, and nothing merges until Pest and PHPStan pass and I have read the diff. I measure what it costs (token audits) and write about where it fails on laravel-blog.cz.' },
+    { name: 'Daily workflow', href: 'https://blog.rajtik.com/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
+      desc: 'AI is one of my tools, not the author. When it helps, I use it to analyse a codebase, weigh options, review a change or take over routine work. Design and decisions stay with me, and nothing merges until Pest and PHPStan pass and I have read the diff. I measure what it costs (token audits) and write about where it fails on blog.rajtik.com.' },
   ],
 
   projects: [
@@ -30,7 +30,7 @@ const en = {
     { name: 'Billify',        tag: 'invoicing API · LLM · CZ', href: 'https://billify.cz',                     body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software. An LLM reads received PDF invoices into the monthly VAT return." },
     { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel, React and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
     { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine with a React renderer. Used by Exile to Exile.' },
-    { name: 'laravel-blog.cz', tag: 'writing · CZ',          href: 'https://laravel-blog.cz',                  body: 'A Czech-language blog where I write about Laravel and day-to-day backend engineering.' },
+    { name: 'blog.rajtik.com', tag: 'writing · CZ',          href: 'https://blog.rajtik.com',                  body: 'A Czech-language blog where I write about Laravel and day-to-day backend engineering.' },
     { name: 'Weather Station', tag: 'ESP32 · Laravel · PostgreSQL', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Balcony weather station, end to end. ESP32 firmware in C++ reads four sensors over I2C and I2S, hears rain in the microphone spectrum and keeps a day of readings on flash when the network drops; schematics in KiCad. A Laravel ingest API stores it in PostgreSQL. Sun heats the radiation shield, so a regression model calibrated against the Czech Hydrometeorological Institute (ČHMÚ) station Plzeň-Mikulka subtracts that heating from light and sun position. It only goes live after it beats the raw sensor on days it never saw.' },
   ],
   repoLabel: 'GitHub repository',

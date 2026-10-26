@@ -19,12 +19,12 @@ const cs: Content = {
   aboutNote: '# Hledám dlouhodobou remote spolupráci na IČO, ideálně na moderním PHP/Laravel stacku.',
 
   ai: [
-    { name: 'Billify', href: 'https://laravel-blog.cz/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM v produkci',
+    { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM v produkci',
       desc: 'Claude převádí PDF faktury od dodavatelů do typovaného schématu. Kurz ČNB si model bere z nástroje napojeného na mou vlastní kurzovou službu. Co je nejasné, skončí v poznámce ke kontrole a každý řádek potvrdí člověk. Kvóta pro každý tým, auditní log a nejlevnější model, který obstojí (asi 0,01 USD za PDF).' },
     { name: 'pis-cesky', href: 'https://github.com/rajtik76/pis-cesky', tag: 'open-source plugin pro Claude Code',
       desc: 'Učí model psát česky tak, aby text nezněl jako strojový překlad. Nejde o blacklist frází: pravidla vycházejí z textů psaných lidmi a kontrolní agent nikdy nevidí zadání, takže posuzuje jen text.' },
-    { name: 'Každodenní práce', href: 'https://laravel-blog.cz/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
-      desc: 'AI je pro mě nástroj, autorem kódu zůstávám já. Kde pomůže, nechám ji projít kód, porovnat možnosti, zkontrolovat změnu nebo převzít rutinu. Návrh a rozhodnutí zůstávají na mně a nic se nemerguje, dokud neprojdou Pest a PHPStan a já si diff nepřečtu. Měřím, kolik práce s AI stojí (audity tokenů), a na laravel-blog.cz píšu o jejích chybách.' },
+    { name: 'Každodenní práce', href: 'https://blog.rajtik.com/clanky/napsal-jsem-192-tokenu-z-deseti-milionu', tag: 'Claude Code',
+      desc: 'AI je pro mě nástroj, autorem kódu zůstávám já. Kde pomůže, nechám ji projít kód, porovnat možnosti, zkontrolovat změnu nebo převzít rutinu. Návrh a rozhodnutí zůstávají na mně a nic se nemerguje, dokud neprojdou Pest a PHPStan a já si diff nepřečtu. Měřím, kolik práce s AI stojí (audity tokenů), a na blog.rajtik.com píšu o jejích chybách.' },
   ],
 
   projects: [
@@ -32,7 +32,7 @@ const cs: Content = {
     { name: 'Billify',        tag: 'fakturační API · LLM · CZ', href: 'https://billify.cz',                   body: 'Faktury vystavíte přes jednoduché REST API. Pro vývojáře, kteří radši zavolají endpoint, než by se proklikávali účetním programem. Přijaté PDF faktury přečte LLM a aplikace z nich připraví měsíční přiznání k DPH.' },
     { name: 'Exile to Exile', tag: 'open-source produkt · PoE2', href: 'https://poe.rajtik.com',              body: 'Bezplatný pomocník pro Path of Exile 2 postavený na Laravelu, Reactu a Inertii: plánovač buildů, nástroje pro pasivní strom, generátor loot filtrů a sdílení buildů.' },
     { name: 'POE2 Toolkit',   tag: 'herní nástroje · OSS',      href: 'https://github.com/rajtik76/poe2-toolkit', body: 'TypeScript toolkit nezávislý na frameworku: extrakce z GGPK, typované extraktory herních dat a headless engine pro geometrii pasivního stromu s rendererem v Reactu. Používá ho Exile to Exile.' },
-    { name: 'laravel-blog.cz', tag: 'psaní · CZ',               href: 'https://laravel-blog.cz',               body: 'Můj blog o Laravelu a každodenní práci na backendu.' },
+    { name: 'blog.rajtik.com', tag: 'psaní · CZ',               href: 'https://blog.rajtik.com',               body: 'Můj blog o Laravelu a každodenní práci na backendu.' },
     { name: 'Weather Station', tag: 'ESP32 · Laravel · PostgreSQL', href: 'https://weather.rajtik.com', repo: 'https://github.com/rajtik76/weather-station', body: 'Meteostanice na balkoně, můj vlastní koncept, od čidla po web. Firmware pro ESP32 v C++ čte čtyři senzory přes I2C a I2S, déšť pozná ze spektra mikrofonu, a když vypadne síť, uchová ve flash paměti měření za celý den. Schémata jsou v KiCadu. Data přijímá API v Laravelu a ukládá je do PostgreSQL. Slunce ohřívá radiační štít, a tak regresní model kalibrovaný podle stanice ČHMÚ Plzeň-Mikulka tenhle ohřev odečítá podle osvitu a polohy slunce. Model jde do provozu teprve tehdy, když je na dnech, na kterých se neučil, přesnější než RAW data z čidla.' },
   ],
   repoLabel: 'Repozitář na GitHubu',
