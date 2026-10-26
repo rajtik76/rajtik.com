@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<title>Vladislav Rajtmajer - životopis</title>
+<style>
+  @page { size: A4; margin: 10mm 14mm; }
+
+  :root{
+    --ink:#15232b;
+    --accent:#d9783d;
+    --head:#1f6174;
+    --muted:#49555b;
+    --soft:#7d8b92;
+    --rule:#b5cbd1;
+    --bar:#dfe8eb;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    color:var(--ink);
+    font-size:8.8pt;
+    line-height:1.3;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1{
+    font-size:24pt;
+    line-height:1.05;
+    margin:0 0 2px;
+    letter-spacing:-.4px;
+  }
+  .role{
+    color:var(--accent);
+    font-weight:bold;
+    font-size:11pt;
+    margin:0 0 5px;
+  }
+  .contact{ color:var(--muted); margin:0; }
+  .links{ color:var(--head); font-weight:bold; margin:1px 0 0; }
+  .contact .sep, .links .sep{ color:var(--soft); padding:0 3px; }
+
+  h2{
+    color:var(--accent);
+    font-size:9pt;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin:8px 0 0;
+    padding-bottom:2px;
+    border-bottom:1px solid var(--rule);
+  }
+  h2 + *{ margin-top:6px; }
+
+  .summary{
+    border-left:3px solid var(--bar);
+    padding-left:9px;
+    margin:6px 0 0;
+    text-align:justify;
+  }
+
+  .skills{ margin:6px 0 0; }
+  .skills b{ color:var(--head); }
+
+  .job{ margin-top:5px; page-break-inside:avoid; }
+  .job:first-of-type{ margin-top:6px; }
+  .jobhead{ display:flex; align-items:baseline; gap:10px; }
+  .jobtitle{ font-weight:bold; color:var(--head); flex:1; }
+  .when{ color:var(--soft); white-space:nowrap; font-size:8.4pt; }
+  ul{ margin:1px 0 0; padding-left:13px; list-style:none; }
+  li{ position:relative; padding-left:2px; }
+  li::before{
+    content:"\25AA";
+    position:absolute; left:-9px; top:0;
+    color:var(--rule); font-size:7pt;
+  }
+  .tech{ color:var(--soft); font-size:8.4pt; }
+
+  .proj{ margin-top:4px; padding-left:13px; position:relative; page-break-inside:avoid; }
+  .proj::before{
+    content:"\25AA";
+    position:absolute; left:2px; top:1px;
+    color:var(--accent); font-size:8pt;
+  }
+  .proj b{ color:var(--head); }
+
+  .edu{ margin:6px 0 0; }
+  ul.ai{ margin-top:6px; }
+  ul.ai li + li{ margin-top:2px; }
+  .lang{ color:var(--muted); margin:2px 0 0; }
+
+  /* Match the original cv.pdf look */
+  body{ font-size:9.1pt; }
+  h2{ color:var(--head); border-bottom:1px solid var(--accent); }
+  .summary{ border-left-color:var(--accent); }
+  .jobtitle{ color:var(--ink); }
+  li::before{ content:"\2022"; color:var(--ink); font-size:9pt; }
+  .edu b{ font-weight:normal; }
+</style>
+</head>
+<body>
+
+  <h1>Vladislav Rajtmajer</h1>
+  <p class="role">Senior PHP / Laravel vývojář</p>
+  <p class="contact">Plzeň<span class="sep">·</span>Remote, spolupráce na IČO<span class="sep">·</span>vladislav.rajtmajer1@gmail.com</p>
+  <p class="links">rajtik.com<span class="sep">·</span>github.com/rajtik76</p>
+
+  <h2>Profil</h2>
+  <p class="summary">
+    Webové aplikace a backend stavím už víc než dvanáct let, posledních pět hlavně v Laravelu. Navrhuji REST API a API pro
+    frontend, data ukládám do PostgreSQL a testy píšu dřív než kód (Pest / PHPUnit), takže pokrytí je vysoké od prvního
+    dne. Předtím jsem deset let dělal embedded a IoT (firmware v C, binární protokoly k hardwaru, telemetrická API)
+    a odtud si nesu důslednost při návrhu datových rozhraní. AI používám denně v produkčních funkcích i při vývoji, ale s pojistkami:
+    přísné schéma výstupu, deterministické nástroje a hotovo až po zelených testech. Roky jsem pracoval
+    v distribuovaných SCRUM týmech s komunikací v angličtině. Hledám dlouhodobou spolupráci
+    na moderním PHP/Laravel stacku.
+  </p>
+
+  <h2>Klíčové dovednosti</h2>
+  <p class="skills">
+    PHP · Laravel · návrh REST API · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
+    Inertia · ElasticSearch · Linux · Nette (2016 - 2021) · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)<br />
+    <b>AI:</b> integrace LLM (Claude, laravel/ai, strukturovaný výstup, tool use) · Claude Code
+  </p>
+
+  <h2>Praxe</h2>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP vývojář - na volné noze (OSVČ)</span>
+      <span class="when">2022 - dosud</span>
+    </div>
+    <ul>
+      <li>Webové aplikace s REST API a API pro frontend. Laravel, Livewire, Vue.js, PostgreSQL.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">PHP vývojář - UBK s.r.o.</span>
+      <span class="when">2021 - 2022</span>
+    </div>
+    <ul>
+      <li>Vývoj v Laravelu na několika klientských produktech.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Vývojář - na volné noze</span>
+      <span class="when">2018 - 2021</span>
+    </div>
+    <ul>
+      <li>CMS pro mezinárodní firmu. SCRUM, denní komunikace jen v angličtině. PHP 8, Nette 3.1, MariaDB.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Vývojář - MySolutions s.r.o.</span>
+      <span class="when">2016 - 2018</span>
+    </div>
+    <ul>
+      <li>Vývoj a údržba seznamovacích platforem ve 12 zemích. SCRUM, standupy v angličtině. PHP, Nette, MySQL.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">IT administrátor a vývojář - Yazaki, Plzeň</span>
+      <span class="when">2013 - 2015</span>
+    </div>
+    <ul>
+      <li>Interní software pro skladové hospodářství kabelových svazků, k tomu správa IT.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jobhead">
+      <span class="jobtitle">Dříve - embedded, IoT a správa systémů</span>
+    </div>
+    <ul>
+      <li>Firmware v C (Atmel AVR / PIC), mimo jiné pro validátor bankovek; telemetrická datová API.</li>
+      <li>Správa serverů s Linuxem a Windows; podnikové aplikace v Delphi a FoxPro.</li>
+    </ul>
+  </div>
+
+  <h2>AI v praxi</h2>
+  <ul class="ai">
+    <li><b>Billify</b> - Claude čte PDF faktury od dodavatelů a připravuje z nich podklady k přiznání k DPH (strukturovaný
+      výstup, teplota 0). Kurz ČNB dodává nástroj, ne model, a každý řádek potvrzuje člověk. Jedno PDF stojí asi 0,01 USD.</li>
+    <li><b>pis-cesky</b> - open-source plugin pro Claude Code, se kterým AI píše přirozenou češtinu. Pravidla vycházejí
+      z textů psaných lidmi a kontrolní agent nevidí zadání, jen text. github.com/rajtik76/pis-cesky</li>
+  </ul>
+
+  <h2>Vybrané projekty a open source</h2>
+
+  <div class="proj">
+    <b>CaptchaAPI</b> - CAPTCHA pro EU na principu proof-of-work, v souladu s GDPR; balíček pro Laravel
+    a plugin pro WordPress.<br />
+    <span class="tech">Laravel · WordPress · Composer / Packagist</span>
+  </div>
+
+  <div class="proj">
+    <b>Billify</b> - REST API pro fakturaci na českém trhu, a modul pro přiznání k DPH, ve kterém pomáhá AI.<br />
+    <span class="tech">Laravel · REST API · PostgreSQL · laravel/ai</span>
+  </div>
+
+  <div class="proj">
+    <b>Exile to Exile</b> - bezplatný open-source pomocník pro Path of Exile 2: plánovač buildů, nástroje pro pasivní
+    strom, generátor loot filtrů a sdílení buildů. Aktualizace herních dat se nasazují
+    automaticky, s kontraktními testy v CI a bezpečným rollbackem.<br />
+    <span class="tech">Laravel 13 · PHP 8.4 · React · Inertia · TypeScript · PostgreSQL · Redis</span>
+  </div>
+
+  <div class="proj">
+    <b>POE2 Toolkit</b> - TypeScript toolkit nezávislý na frameworku: přístup ke GGPK, typované extraktory herních dat
+    a headless engine pro geometrii pasivního stromu a renderer v Reactu. Vychází na npm pod licencí MIT,
+    používá ho Exile to Exile.<br />
+    <span class="tech">TypeScript · React · npm · CI · MIT open source</span>
+  </div>
+
+  <div class="proj">
+    <b>Weather Station</b> - meteostanice od čidla po web: firmware pro ESP32 v C++ (senzory na I2C / I2S, rozpoznání deště
+    podle zvuku z mikrofonu, záloha měření ve flash paměti, schémata v KiCadu), API v Laravelu pro příjem dat, dashboard
+    v Livewire. Regresní model kalibrovaný podle dat ČHMÚ odečítá od naměřené teploty ohřev radiačního štítu sluncem.<br />
+    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · weather.rajtik.com · github.com/rajtik76/weather-station</span>
+  </div>
+
+  <div class="proj">
+    <b>laravel-blog.cz</b> - můj blog o Laravelu, backendu a vývoji s pomocí AI.
+  </div>
+
+  <h2>Vzdělání a jazyky</h2>
+  <p class="edu">SPŠ Ostrov, maturita - <b>elektronika, telekomunikace a výpočetní technika</b>.&nbsp;&nbsp;
+    Čeština - rodilý mluvčí.&nbsp;&nbsp; Angličtina - pracovní úroveň.</p>
+
+</body>
+</html>
