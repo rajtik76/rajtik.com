@@ -28,5 +28,10 @@ DNS (already set, unproxied):
 - `AAAA  rajtik.com      2a01:4f8:1c19:2aae::1`
 - `CNAME www.rajtik.com  rajtik.com`
 
-Editing content: everything lives in `src/pages/index.astro`, in the data arrays
-at the top (projects, packages, experience, skills).
+Editing content: texts live in `src/i18n/en.ts` (served at `/`) and
+`src/i18n/cs.ts` (served at `/cs/`); markup and styles in
+`src/components/Page.astro`. `/` redirects to `/cs/` when the browser prefers
+Czech or Slovak; the CZ | EN switch stores the choice in localStorage.
+
+CV: `cv-src/cv.html` (English) and `cv-src/cv-cs.html` (Czech) render to
+`public/*.pdf` via `scripts/build-cv.sh`.
