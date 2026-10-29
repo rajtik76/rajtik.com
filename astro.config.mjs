@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://rajtik.com',
+  site: 'https://cv.rajtik.com',
   compressHTML: true,
 });

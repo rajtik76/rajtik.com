@@ -1,6 +1,8 @@
-# rajtik.com
+# cv.rajtik.com
 
-Personal one-pager. Astro static site, served by nginx.
+Freelance profile and CV. The apex `rajtik.com` is a separate project hub.
+
+Astro static site, served by nginx.
 
 ## Local
 
@@ -17,16 +19,14 @@ Dockerfile build pack. Coolify builds the image and runs nginx on port 80.
 Settings:
 - **Build Pack:** Dockerfile
 - **Port:** 80
-- **Domains:** `https://rajtik.com`, `https://www.rajtik.com`
-- **Redirect:** www → apex (or apex → www, pick one)
+- **Domains:** `https://cv.rajtik.com`
 - **SSL:** Let's Encrypt (DNS is unproxied, A/AAAA point at the server)
 
 Deploys automatically from pushes to the `main` branch via the Coolify GitHub webhook.
 
 DNS (already set, unproxied):
-- `A     rajtik.com      178.104.125.70`
-- `AAAA  rajtik.com      2a01:4f8:1c19:2aae::1`
-- `CNAME www.rajtik.com  rajtik.com`
+- `A     cv.rajtik.com   178.104.125.70`
+- `AAAA  cv.rajtik.com   2a01:4f8:1c19:2aae::1`
 
 Editing content: texts live in `src/i18n/en.ts` (served at `/`) and
 `src/i18n/cs.ts` (served at `/cs/`); markup and styles in

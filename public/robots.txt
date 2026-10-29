@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rajtik.com/sitemap.xml
+Sitemap: https://cv.rajtik.com/sitemap.xml
