@@ -92,6 +92,7 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 <meta name="twitter:title" content={t.title} />
 <meta name="twitter:description" content={t.description} />
 <meta name="twitter:image" content="https://cv.rajtik.com/og.png" />
+<script is:inline defer src="https://stats.rajtik.com/script.js" data-website-id="0ea9f981-3509-49b1-a820-55034e93a1ab" data-domains="cv.rajtik.com"></script>
 <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -197,7 +198,7 @@ const highlightedReleaseCode = highlightPhp(releaseCode);
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cmd">cv <span class="flag">--download</span></span></p>
     <div class="blk out">
-      {t.cv.map((c, i) => <>{i > 0 && ' · '}<a href={c.href} download={c.download}>{c.label}</a></>)}
+      {t.cv.map((c, i) => <>{i > 0 && ' · '}<a href={c.href} download={c.download} data-umami-event="cv-download" data-umami-event-file={c.href}>{c.label}</a></>)}
     </div>
 
     <p class="pr"><b>vladislav@rajtik</b>:<span class="tilde">~</span>$ <span class="cursor"></span></p>
