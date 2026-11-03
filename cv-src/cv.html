@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Vladislav Rajtmajer - CV</title>
 <style>
-  @page { size: A4; margin: 10mm 14mm; }
+  @page { size: A4; margin: 7mm 14mm; }
 
   :root{
     --ink:#15232b;
@@ -103,24 +103,24 @@
 <body>
 
   <h1>Vladislav Rajtmajer</h1>
-  <p class="role">Senior PHP / Laravel Engineer</p>
+  <p class="role">Senior PHP / Laravel / Nette Engineer</p>
   <p class="contact">Plzen, Czech Republic<span class="sep">·</span>Remote, contract (self-employed)<span class="sep">·</span>vladislav.rajtmajer1@gmail.com</p>
   <p class="links"><a href="https://cv.rajtik.com">cv.rajtik.com</a><span class="sep">·</span><a href="https://github.com/rajtik76">github.com/rajtik76</a></p>
 
   <h2>Summary</h2>
   <p class="summary">
-    Senior PHP/Laravel engineer with 12+ years building web applications and backend systems. Focused on Laravel,
+    Senior PHP engineer with 12+ years building web applications and backend systems. Focused on Laravel and Nette,
     REST and user-facing API design, and PostgreSQL, with a test-first habit (Pest / PHPUnit, high coverage from day
     one). An earlier decade in embedded and IoT (binary hardware protocols, telemetry APIs, firmware in C) still
     shapes how I design data interfaces. I use AI daily, in production features and in development, with guardrails:
     strict schemas, deterministic tools, tests as the definition of done. Years of experience in English-only, SCRUM remote teams. Available for
-    long-term remote contract work on a modern PHP/Laravel stack.
+    long-term remote contract work on a modern PHP stack, Laravel or Nette.
   </p>
 
   <h2>Core skills</h2>
   <p class="skills">
-    PHP · Laravel · REST API design · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
-    Inertia · Nette · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)<br />
+    PHP · Laravel · Nette · REST API design · PostgreSQL · MySQL · Pest / PHPUnit · Livewire · Vue.js · React · TypeScript ·
+    Inertia · ElasticSearch · Linux · IoT / LoRaWAN · embedded C (Atmel AVR / PIC)<br />
     <b>AI:</b> LLM integration (Claude, laravel/ai, structured output, tool use) · Claude Code
   </p>
 
@@ -202,6 +202,12 @@
   </div>
 
   <div class="proj">
+    <b>Nette packages</b> - Laravel workflow for Nette: artisan-like console, migrations with seeders and factories, route
+    middleware, Tailwind 4 starter.<br />
+    <span class="tech">Nette 3.2 · PHP 8.4 · SQLite / MySQL / PostgreSQL · Composer / Packagist</span>
+  </div>
+
+  <div class="proj">
     <b>Billify</b> - invoicing REST API for the Czech market, with an AI-assisted VAT return module.<br />
     <span class="tech">Laravel · REST API · PostgreSQL · laravel/ai</span>
   </div>
@@ -221,9 +227,8 @@
   <div class="proj">
     <b>Weather Station</b> - end to end: ESP32 firmware in C++ (I2C / I2S sensors, rain from the microphone spectrum, offline
     buffer on flash, KiCad schematics), Laravel ingest API, Livewire dashboard. A regression model calibrated against Czech
-    Hydrometeorological Institute (ČHMÚ) data removes solar heating of the radiation shield; validated on held-out days.
-    Live at weather.rajtik.com.<br />
-    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · github.com/rajtik76/weather-station</span>
+    Hydrometeorological Institute (ČHMÚ) data removes solar heating of the radiation shield; validated on held-out days.<br />
+    <span class="tech">ESP32 · C++ · I2C / I2S · KiCad · Laravel · Livewire · PostgreSQL · weather.rajtik.com · github.com/rajtik76/weather-station</span>
   </div>
 
   <div class="proj">
@@ -231,8 +236,8 @@
   </div>
 
   <h2>Education &amp; languages</h2>
-  <p class="edu">Secondary technical school, Maturita - <b>Electronics, Telecommunications and Computing</b>. SPS Ostrov.</p>
-  <p class="lang">English - working proficiency.&nbsp;&nbsp; Czech - native.</p>
+  <p class="edu">Secondary technical school, Maturita - <b>Electronics, Telecommunications and Computing</b>. SPS Ostrov.&nbsp;&nbsp;
+    English - working proficiency.&nbsp;&nbsp; Czech - native.</p>
 
 </body>
 </html>
