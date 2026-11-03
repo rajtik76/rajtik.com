@@ -4,19 +4,19 @@ const cs: Content = {
   lang: 'cs',
   path: '/cs/',
   locale: 'cs_CZ',
-  title: 'Vladislav Rajtmajer - Senior PHP / Laravel vývojář',
-  description: 'Senior PHP/Laravel vývojář s více než dvanácti lety praxe. REST API, PostgreSQL, Livewire a Vue.js, LLM v produkci. Remote spolupráce na IČO.',
+  title: 'Vladislav Rajtmajer - Senior PHP / Laravel / Nette vývojář',
+  description: 'Senior PHP vývojář s více než dvanácti lety praxe, Laravel i Nette. REST API, PostgreSQL, Livewire a Vue.js, LLM v produkci. Remote spolupráce na IČO.',
 
-  role: 'Senior PHP / Laravel vývojář',
+  role: 'Senior PHP / Laravel / Nette vývojář',
   meta: 'Plzeň · remote · spolupráce na IČO',
   avail: 'k dispozici pro novou spolupráci',
 
   about: [
-    'Webové aplikace a backend stavím už víc než dvanáct let. Pracuji hlavně v Laravelu: navrhuji REST API a API pro frontend, data ukládám do PostgreSQL, řeším fronty a tu nudnou práci kolem spolehlivosti, díky které se API chová předvídatelně. Frontend dělám v Livewire a Vue.js.',
+    'Webové aplikace a backend stavím už víc než dvanáct let. Pracuji v Laravelu a v Nette: navrhuji REST API a API pro frontend, data ukládám do PostgreSQL, řeším fronty a tu nudnou práci kolem spolehlivosti, díky které se API chová předvídatelně. Frontend dělám v Livewire a Vue.js. Pro Nette vydávám open-source balíčky, které do něj přenášejí to, co mi chybělo z Laravelu: konzoli, migrace a middleware.',
     'Než jsem přešel na web, deset let jsem dělal embedded a IoT: firmware v C pro Atmel AVR a PIC, binární protokoly a telemetrii. Tam jsem se naučil hlídat přesný formát dat a brát okrajové případy jako běžný provoz.',
     'AI používám každý den, v produktech i v editoru, a vím, kde selhává. AI proto dostává přísné schéma výstupu a deterministické nástroje. A o tom, jestli je práce hotová, rozhodují testy a já, ne AI.',
   ],
-  aboutNote: '# Hledám dlouhodobou remote spolupráci na IČO, ideálně na moderním PHP/Laravel stacku.',
+  aboutNote: '# Hledám dlouhodobou remote spolupráci na IČO, ideálně na moderním PHP stacku s Laravelem nebo Nette.',
 
   ai: [
     { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM v produkci',
@@ -29,6 +29,7 @@ const cs: Content = {
 
   projects: [
     { name: 'CaptchaAPI',     tag: 'CAPTCHA bez sledování · EU', href: 'https://captchaapi.eu', repo: 'https://github.com/captchaapi/laravel', body: 'CAPTCHA na principu proof-of-work, od začátku navržená v souladu s GDPR. Nic nesleduje a Google nepotřebuje. Má vlastní balíček pro Laravel a plugin pro WordPress.' },
+    { name: 'Balíčky pro Nette', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'To, co mi v Nette chybělo z Laravelu, jsem přenesl do čtyř balíčků pro Composer: konzole ve stylu artisanu s automatickou registrací balíčků a generátory make:, migrace se schema builderem, seedery a factory pro SQLite, MySQL, MariaDB a PostgreSQL, middleware pro routy a startovní projekt s Tailwindem 4 a Vite.' },
     { name: 'Billify',        tag: 'fakturační API · LLM · CZ', href: 'https://billify.cz',                   body: 'Faktury vystavíte přes jednoduché REST API. Pro vývojáře, kteří radši zavolají endpoint, než by se proklikávali účetním programem. Přijaté PDF faktury přečte LLM a aplikace z nich připraví měsíční přiznání k DPH.' },
     { name: 'Exile to Exile', tag: 'open-source produkt · PoE2', href: 'https://poe.rajtik.com',              body: 'Bezplatný pomocník pro Path of Exile 2 postavený na Laravelu, Reactu a Inertii: plánovač buildů, nástroje pro pasivní strom, generátor loot filtrů a sdílení buildů.' },
     { name: 'POE2 Toolkit',   tag: 'herní nástroje · OSS',      href: 'https://github.com/rajtik76/poe2-toolkit', body: 'TypeScript toolkit nezávislý na frameworku: extrakce z GGPK, typované extraktory herních dat a headless engine pro geometrii pasivního stromu s rendererem v Reactu. Používá ho Exile to Exile.' },
@@ -55,7 +56,7 @@ const cs: Content = {
     { yr: 'před 2013',    role: 'Embedded, IoT a správa systémů', org: null,            desc: 'Deset let firmwaru v C (Atmel AVR / PIC) včetně validátoru bankovek, binární protokoly pro komunikaci s hardwarem, telemetrická API, LoRaWAN; servery s Linuxem a Windows; podnikové aplikace v Delphi a FoxPro.' },
   ],
 
-  skills: ['PHP','Laravel','návrh REST API','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','integrace LLM (Claude, laravel/ai)','Claude Code','Docker','Linux','Nette (2016 - 2021)','embedded C','IoT / LoRaWAN'],
+  skills: ['PHP','Laravel','Nette','návrh REST API','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','integrace LLM (Claude, laravel/ai)','Claude Code','Docker','Linux','embedded C','IoT / LoRaWAN'],
   languages: 'Čeština: rodilý mluvčí. Angličtina: pracovní úroveň, roky denních standupů jen v angličtině.',
 
   cv: [

@@ -2,19 +2,19 @@ const en = {
   lang: 'en',
   path: '/',
   locale: 'en_US',
-  title: 'Vladislav Rajtmajer - Senior PHP / Laravel Engineer',
-  description: 'Senior PHP/Laravel engineer, 12+ years. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU.',
+  title: 'Vladislav Rajtmajer - Senior PHP / Laravel / Nette Engineer',
+  description: 'Senior PHP engineer, 12+ years, Laravel and Nette. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU.',
 
-  role: 'Senior PHP / Laravel Engineer',
+  role: 'Senior PHP / Laravel / Nette Engineer',
   meta: 'Plzeň, Czech Republic · remote · contract (IČO)',
   avail: 'available now for new contracts',
 
   about: [
-    '12+ years building web applications and backend systems. I work mostly in Laravel: REST and user-facing API design, PostgreSQL, queues, and the boring reliability work that keeps APIs predictable. On the frontend I build with Livewire and Vue.js.',
+    '12+ years building web applications and backend systems. I work in Laravel and Nette: REST and user-facing API design, PostgreSQL, queues, and the boring reliability work that keeps APIs predictable. On the frontend I build with Livewire and Vue.js. For Nette I publish open-source packages that bring over what I missed from Laravel: a console, migrations and middleware.',
     'Before the web I spent a decade in embedded and IoT, writing firmware in C for Atmel AVR and PIC, binary protocols and telemetry pipelines. That is where I learned to keep data contracts strict and to treat edge cases as the normal case.',
     'I use AI every day, in the products and in the editor, and I know where it breaks. So the model gets a strict schema and the boring tools, and the tests, not the model, say when the work is done.',
   ],
-  aboutNote: '# Open to long-term remote contracts on a modern PHP/Laravel stack.',
+  aboutNote: '# Open to long-term remote contracts on a modern PHP stack, Laravel or Nette.',
 
   ai: [
     { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
@@ -27,6 +27,7 @@ const en = {
 
   projects: [
     { name: 'CaptchaAPI',     tag: 'privacy CAPTCHA · EU',   href: 'https://captchaapi.eu', repo: 'https://github.com/captchaapi/laravel', body: 'Proof-of-work CAPTCHA, GDPR-first. No tracking, no Google. Ships with its own Laravel package and WordPress plugin.' },
+    { name: 'Nette packages', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'What I missed from Laravel, brought to Nette as four Composer packages: an artisan-like console with package discovery and make: generators, migrations with a schema builder, seeders and factories for SQLite, MySQL, MariaDB and PostgreSQL, route middleware, and a Tailwind 4 + Vite starter.' },
     { name: 'Billify',        tag: 'invoicing API · LLM · CZ', href: 'https://billify.cz',                     body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software. An LLM reads received PDF invoices into the monthly VAT return." },
     { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel, React and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
     { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine with a React renderer. Used by Exile to Exile.' },
@@ -53,7 +54,7 @@ const en = {
     { yr: 'before 2013', role: 'Embedded, IoT & systems engineering', org: null,      desc: 'A decade of firmware in C (Atmel AVR / PIC) incl. a banknote validator, binary hardware protocols, telemetry APIs, LoRaWAN; Linux/Windows servers; Delphi/FoxPro business apps.' },
   ],
 
-  skills: ['PHP','Laravel','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Docker','Linux','embedded C','IoT / LoRaWAN'],
+  skills: ['PHP','Laravel','Nette','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Docker','Linux','embedded C','IoT / LoRaWAN'],
   languages: 'English: working proficiency, years of English-only daily standups. Czech: native.',
 
   cv: [
