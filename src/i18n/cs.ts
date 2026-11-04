@@ -12,7 +12,7 @@ const cs: Content = {
   avail: 'k dispozici pro novou spolupráci',
 
   about: [
-    'Webové aplikace a backend stavím už víc než dvanáct let. Pracuji v Laravelu a v Nette: navrhuji REST API a API pro frontend, data ukládám do PostgreSQL, řeším fronty a tu nudnou práci kolem spolehlivosti, díky které se API chová předvídatelně. Frontend dělám v Livewire a Vue.js. Pro Nette vydávám open-source balíčky, které do něj přenášejí to, co mi chybělo z Laravelu: konzoli, migrace a middleware.',
+    'Webové aplikace a backend stavím už víc než dvanáct let. Pracuji v Laravelu a v Nette: navrhuji REST API a API pro frontend, data ukládám do PostgreSQL, řeším fronty a tu nudnou práci kolem spolehlivosti, díky které se API chová předvídatelně. Frontend dělám v Livewire a Vue.js. Pro Nette vydávám open-source balíčky, které do něj přenášejí to, co mi chybělo z Laravelu: konzoli a migrace.',
     'Než jsem přešel na web, deset let jsem dělal embedded a IoT: firmware v C pro Atmel AVR a PIC, binární protokoly a telemetrii. Tam jsem se naučil hlídat přesný formát dat a brát okrajové případy jako běžný provoz.',
     'AI používám každý den, v produktech i v editoru, a vím, kde selhává. AI proto dostává přísné schéma výstupu a deterministické nástroje. A o tom, jestli je práce hotová, rozhodují testy a já, ne AI.',
   ],
@@ -29,7 +29,7 @@ const cs: Content = {
 
   projects: [
     { name: 'CaptchaAPI',     tag: 'CAPTCHA bez sledování · EU', href: 'https://captchaapi.eu', repo: 'https://github.com/captchaapi/laravel', body: 'CAPTCHA na principu proof-of-work, od začátku navržená v souladu s GDPR. Nic nesleduje a Google nepotřebuje. Má vlastní balíček pro Laravel a plugin pro WordPress.' },
-    { name: 'Balíčky pro Nette', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'To, co mi v Nette chybělo z Laravelu, jsem přenesl do čtyř balíčků pro Composer: konzole ve stylu artisanu s automatickou registrací balíčků a generátory make:, migrace se schema builderem, seedery a factory pro SQLite, MySQL, MariaDB a PostgreSQL, middleware pro routy a startovní projekt s Tailwindem 4 a Vite.' },
+    { name: 'Balíčky pro Nette', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'To, co mi v Nette chybělo z Laravelu, jsem přenesl do balíčků pro Composer: konzole ve stylu artisanu s automatickou registrací balíčků a generátory make:, migrace se schema builderem, seedery a factory pro SQLite, MySQL, MariaDB a PostgreSQL a k tomu startovní projekt s Tailwindem 4 a Vite.' },
     { name: 'Billify',        tag: 'fakturační API · LLM · CZ', href: 'https://billify.cz',                   body: 'Faktury vystavíte přes jednoduché REST API. Pro vývojáře, kteří radši zavolají endpoint, než by se proklikávali účetním programem. Přijaté PDF faktury přečte LLM a aplikace z nich připraví měsíční přiznání k DPH.' },
     { name: 'Exile to Exile', tag: 'open-source produkt · PoE2', href: 'https://poe.rajtik.com',              body: 'Bezplatný pomocník pro Path of Exile 2 postavený na Laravelu a Inertii: plánovač buildů, nástroje pro pasivní strom, generátor loot filtrů a sdílení buildů.' },
     { name: 'POE2 Toolkit',   tag: 'herní nástroje · OSS',      href: 'https://github.com/rajtik76/poe2-toolkit', body: 'TypeScript toolkit nezávislý na frameworku: extrakce z GGPK, typované extraktory herních dat a headless engine pro geometrii pasivního stromu. Používá ho Exile to Exile.' },

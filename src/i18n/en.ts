@@ -10,7 +10,7 @@ const en = {
   avail: 'available now for new contracts',
 
   about: [
-    '12+ years building web applications and backend systems. I work in Laravel and Nette: REST and user-facing API design, PostgreSQL, queues, and the boring reliability work that keeps APIs predictable. On the frontend I build with Livewire and Vue.js. For Nette I publish open-source packages that bring over what I missed from Laravel: a console, migrations and middleware.',
+    '12+ years building web applications and backend systems. I work in Laravel and Nette: REST and user-facing API design, PostgreSQL, queues, and the boring reliability work that keeps APIs predictable. On the frontend I build with Livewire and Vue.js. For Nette I publish open-source packages that bring over what I missed from Laravel: a console and migrations.',
     'Before the web I spent a decade in embedded and IoT, writing firmware in C for Atmel AVR and PIC, binary protocols and telemetry pipelines. That is where I learned to keep data contracts strict and to treat edge cases as the normal case.',
     'I use AI every day, in the products and in the editor, and I know where it breaks. So the model gets a strict schema and the boring tools, and the tests, not the model, say when the work is done.',
   ],
@@ -27,7 +27,7 @@ const en = {
 
   projects: [
     { name: 'CaptchaAPI',     tag: 'privacy CAPTCHA · EU',   href: 'https://captchaapi.eu', repo: 'https://github.com/captchaapi/laravel', body: 'Proof-of-work CAPTCHA, GDPR-first. No tracking, no Google. Ships with its own Laravel package and WordPress plugin.' },
-    { name: 'Nette packages', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'What I missed from Laravel, brought to Nette as four Composer packages: an artisan-like console with package discovery and make: generators, migrations with a schema builder, seeders and factories for SQLite, MySQL, MariaDB and PostgreSQL, route middleware, and a Tailwind 4 + Vite starter.' },
+    { name: 'Nette packages', tag: 'open source · Composer', href: 'https://packagist.org/packages/rajtik76/', body: 'What I missed from Laravel, brought to Nette as Composer packages: an artisan-like console with package discovery and make: generators, migrations with a schema builder, seeders and factories for SQLite, MySQL, MariaDB and PostgreSQL, and a Tailwind 4 + Vite starter.' },
     { name: 'Billify',        tag: 'invoicing API · LLM · CZ', href: 'https://billify.cz',                     body: "Issue invoices over a clean REST API. Built for developers who'd rather call an endpoint than click through accounting software. An LLM reads received PDF invoices into the monthly VAT return." },
     { name: 'Exile to Exile', tag: 'open-source product · PoE2', href: 'https://poe.rajtik.com',                 body: 'Free Path of Exile 2 companion built with Laravel and Inertia: build planner, passive-tree tools, loot-filter generator and shareable builds.' },
     { name: 'POE2 Toolkit',   tag: 'game tooling · OSS',     href: 'https://github.com/rajtik76/poe2-toolkit', body: 'Framework-agnostic TypeScript toolkit for GGPK extraction, typed game-data extractors and a headless passive-tree geometry engine. Used by Exile to Exile.' },
