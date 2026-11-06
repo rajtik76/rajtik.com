@@ -7,7 +7,7 @@ const cs: Content = {
   title: 'Vladislav Rajtmajer - Senior PHP / Laravel vývojář',
   description: 'Senior PHP a Laravel vývojář s více než dvanácti lety praxe. Produkční API, datové integrace, PostgreSQL, Livewire a Vue.js. Plně remote spolupráce na IČO.',
 
-  role: 'Senior PHP / Laravel vývojář',
+  role: 'Senior Backend / Full-stack Engineer',
   meta: 'Plzeň · 100% remote · spolupráce na IČO',
   avail: 'k dispozici pro plný i částečný úvazek',
   contactCta: 'Probrat spolupráci',

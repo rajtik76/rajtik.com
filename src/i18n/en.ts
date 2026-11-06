@@ -5,7 +5,7 @@ const en = {
   title: 'Vladislav Rajtmajer - Senior PHP / Laravel Backend Engineer',
   description: 'Senior PHP and Laravel engineer with 12+ years of experience. Production APIs, data integrations, PostgreSQL, Livewire and Vue.js. Available for remote B2B contracts in Europe.',
 
-  role: 'Senior PHP / Laravel Backend Engineer',
+  role: 'Senior Backend / Full-stack Engineer',
   meta: 'Pilsen, Czech Republic · 100% remote · B2B contractor',
   avail: 'available for full-time or part-time contracts',
   contactCta: 'Discuss a contract',
