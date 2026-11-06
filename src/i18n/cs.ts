@@ -4,19 +4,32 @@ const cs: Content = {
   lang: 'cs',
   path: '/cs/',
   locale: 'cs_CZ',
-  title: 'Vladislav Rajtmajer - Senior PHP / Laravel / Nette vývojář',
-  description: 'Senior PHP vývojář s více než dvanácti lety praxe, Laravel i Nette. REST API, PostgreSQL, Livewire a Vue.js, LLM v produkci. Remote spolupráce na IČO.',
+  title: 'Vladislav Rajtmajer - Senior PHP / Laravel vývojář',
+  description: 'Senior PHP a Laravel vývojář s více než dvanácti lety praxe. Produkční API, datové integrace, PostgreSQL, Livewire a Vue.js. Plně remote spolupráce na IČO.',
 
-  role: 'Senior PHP / Laravel / Nette vývojář',
-  meta: 'Plzeň · remote · spolupráce na IČO',
-  avail: 'k dispozici pro novou spolupráci',
+  role: 'Senior PHP / Laravel vývojář',
+  meta: 'Plzeň · 100% remote · spolupráce na IČO',
+  avail: 'k dispozici pro plný i částečný úvazek',
+  contactCta: 'Probrat spolupráci',
+  hubLabel: 'Projektový hub',
+  headings: {
+    about: 'Profil',
+    experience: 'Zakázky a praxe',
+    ai: 'AI v praxi',
+    projects: 'Vybrané projekty',
+    packages: 'Vydané balíčky',
+    code: 'Ukázka technického řešení',
+    skills: 'Dovednosti',
+    contact: 'Kontakt',
+    cv: 'Životopis',
+  },
 
   about: [
-    'Webové aplikace a backend stavím už víc než dvanáct let. Pracuji v Laravelu a v Nette: navrhuji REST API a API pro frontend, data ukládám do PostgreSQL, řeším fronty a tu nudnou práci kolem spolehlivosti, díky které se API chová předvídatelně. Frontend dělám v Livewire a Vue.js. Pro Nette vydávám open-source balíčky, které do něj přenášejí to, co mi chybělo z Laravelu: konzoli a migrace.',
-    'Než jsem přešel na web, deset let jsem dělal embedded a IoT: firmware v C pro Atmel AVR a PIC, binární protokoly a telemetrii. Tam jsem se naučil hlídat přesný formát dat a brát okrajové případy jako běžný provoz.',
-    'AI používám každý den, v produktech i v editoru, a vím, kde selhává. AI proto dostává přísné schéma výstupu a deterministické nástroje. A o tom, jestli je práce hotová, rozhodují testy a já, ne AI.',
+    'Vyvíjím a udržuji produkční aplikace v PHP, dnes především v Laravelu. Pro dlouhodobého klienta pracuji na API a zpracování dat z terénních zařízení: dekóduji zprávy z různých verzí firmwaru, skládám neúplné přenosy a ověřuji hodnoty vůči datovému modelu. Pro nový frontend jsem také postavil JSON API včetně autentizace a správy účtů.',
+    'S PHP pracuji přes dvanáct let. Řeším backend, databáze i frontend: Laravel, PostgreSQL a MySQL, Pest / PHPUnit, PHPStan, Livewire a Vue.js. Roky jsem pracoval v distribuovaných týmech s každodenní komunikací v angličtině. V Nette mám starší produkční zkušenost a dnes pro něj vydávám vlastní balíčky.',
+    'Kromě zakázek stavím a vydávám vlastní produkty. AI používám při vývoji i v některých produkčních funkcích; tam, kde záleží na správnosti, pracuji se strukturovaným výstupem, deterministickými nástroji a testy.',
   ],
-  aboutNote: '# Hledám dlouhodobou remote spolupráci na IČO, ideálně na moderním PHP stacku s Laravelem nebo Nette.',
+  aboutNote: 'Hledám dlouhodobou spolupráci na IČO, plně na dálku. Plný i částečný úvazek.',
 
   ai: [
     { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM v produkci',
@@ -48,7 +61,7 @@ const cs: Content = {
   codeCaptionPrefix: 'Ukázka z',
 
   experience: [
-    { yr: '2022 - dosud', role: 'PHP vývojář',              org: 'Na volné noze (OSVČ)', desc: 'Webové aplikace, REST API a API pro frontend, Livewire, Vue.js, PostgreSQL.' },
+    { yr: '2022 - dosud', role: 'PHP / Laravel vývojář', org: 'Na volné noze (OSVČ)', desc: 'Dlouhodobá zakázka: API pro data z terénních zařízení, dekódování a validace binárních zpráv, autentizace a správa účtů pro nový frontend; Pest, PHPStan a OpenAPI.' },
     { yr: '2021 - 2022',  role: 'PHP vývojář',              org: 'UBK s.r.o.',           desc: 'Vývoj v Laravelu na několika klientských produktech.' },
     { yr: '2018 - 2021',  role: 'Vývojář',                  org: 'Na volné noze',        desc: 'CMS pro mezinárodní firmu. SCRUM, denní komunikace jen v angličtině. PHP 8, Nette, MariaDB.' },
     { yr: '2016 - 2018',  role: 'Vývojář',                  org: 'MySolutions s.r.o.',   desc: 'Seznamovací platformy ve 12 zemích. SCRUM, standupy v angličtině. PHP, Nette, MySQL.' },

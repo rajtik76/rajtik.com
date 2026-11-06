@@ -2,19 +2,32 @@ const en = {
   lang: 'en',
   path: '/',
   locale: 'en_US',
-  title: 'Vladislav Rajtmajer - Senior PHP / Laravel / Nette Engineer',
-  description: 'Senior PHP engineer, 12+ years, Laravel and Nette. REST APIs, PostgreSQL, Livewire and Vue.js, LLM features in production. Available for remote contracting in the EU.',
+  title: 'Vladislav Rajtmajer - Senior PHP / Laravel Backend Engineer',
+  description: 'Senior PHP and Laravel engineer with 12+ years of experience. Production APIs, data integrations, PostgreSQL, Livewire and Vue.js. Available for remote B2B contracts in Europe.',
 
-  role: 'Senior PHP / Laravel / Nette Engineer',
-  meta: 'Plzeň, Czech Republic · remote · contract (IČO)',
-  avail: 'available now for new contracts',
+  role: 'Senior PHP / Laravel Backend Engineer',
+  meta: 'Pilsen, Czech Republic · 100% remote · B2B contractor',
+  avail: 'available for full-time or part-time contracts',
+  contactCta: 'Discuss a contract',
+  hubLabel: 'Project hub',
+  headings: {
+    about: 'Profile',
+    experience: 'Client work and experience',
+    ai: 'AI in practice',
+    projects: 'Selected projects',
+    packages: 'Published packages',
+    code: 'Engineering example',
+    skills: 'Skills',
+    contact: 'Contact',
+    cv: 'CV',
+  },
 
   about: [
-    '12+ years building web applications and backend systems. I work in Laravel and Nette: REST and user-facing API design, PostgreSQL, queues, and the boring reliability work that keeps APIs predictable. On the frontend I build with Livewire and Vue.js. For Nette I publish open-source packages that bring over what I missed from Laravel: a console and migrations.',
-    'Before the web I spent a decade in embedded and IoT, writing firmware in C for Atmel AVR and PIC, binary protocols and telemetry pipelines. That is where I learned to keep data contracts strict and to treat edge cases as the normal case.',
-    'I use AI every day, in the products and in the editor, and I know where it breaks. So the model gets a strict schema and the boring tools, and the tests, not the model, say when the work is done.',
+    'I build and maintain production PHP applications, with Laravel as my current primary framework. For a long-term client I work on APIs and data arriving from field hardware: decoding messages from different firmware versions, reassembling partial transmissions and validating them against the application data model. I also built the JSON API for a new frontend, including authentication and account flows.',
+    'I have 12+ years in PHP and work across backend, database and frontend: Laravel, PostgreSQL and MySQL, Pest / PHPUnit, PHPStan, Livewire and Vue.js. I have worked for years in distributed teams with English-only daily communication. Earlier in my career I wrote embedded firmware and telemetry software.',
+    'I also build and publish my own products and packages. AI is part of my daily workflow and some production features; I use structured outputs, deterministic tools and tests where correctness matters.',
   ],
-  aboutNote: '# Open to long-term remote contracts on a modern PHP stack, Laravel or Nette.',
+  aboutNote: 'Open to long-term, fully remote B2B work from Czechia. Full-time or part-time.',
 
   ai: [
     { name: 'Billify', href: 'https://blog.rajtik.com/clanky/ai-dekoduje-pdf-faktury-cnb-sluzba-jako-nastroj-agenta', tag: 'LLM in production',
@@ -46,7 +59,7 @@ const en = {
   codeCaptionPrefix: 'Excerpt from',
 
   experience: [
-    { yr: '2022 - now',  role: 'PHP Developer',          org: 'Freelance (OSVČ)',     desc: 'Web apps, REST + user-facing APIs, Livewire, Vue.js, PostgreSQL.' },
+    { yr: '2022 - now',  role: 'PHP / Laravel Engineer',  org: 'Freelance (self-employed)', desc: 'Long-term client work: Laravel APIs for field-device data, binary message decoding and validation, authentication and account flows for a new frontend; Pest, PHPStan and OpenAPI.' },
     { yr: '2021 - 2022', role: 'PHP Developer',          org: 'UBK s.r.o.',           desc: 'Laravel development across multiple client products.' },
     { yr: '2018 - 2021', role: 'Developer',              org: 'Freelance',            desc: 'CMS for an international company. SCRUM, English-only daily comms. PHP 8, Nette, MariaDB.' },
     { yr: '2016 - 2018', role: 'Developer',              org: 'MySolutions s.r.o.',   desc: 'Dating platforms across 12 countries. SCRUM, English-only standups. PHP, Nette, MySQL.' },
@@ -54,7 +67,7 @@ const en = {
     { yr: 'before 2013', role: 'Embedded, IoT & systems engineering', org: null,      desc: 'A decade of firmware in C (Atmel AVR / PIC) incl. a banknote validator, binary hardware protocols, telemetry APIs, LoRaWAN; Linux/Windows servers; Delphi/FoxPro business apps.' },
   ],
 
-  skills: ['PHP','Laravel','Nette','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','LLM integration (Claude, laravel/ai)','Claude Code','Docker','Linux','embedded C','IoT / LoRaWAN'],
+  skills: ['PHP','Laravel','Nette','REST API design','PostgreSQL','MySQL','Redis','Pest / PHPUnit','PHPStan','Livewire','Vue.js','Inertia','TypeScript','Docker','Linux','LLM integration (Claude, laravel/ai)','Claude Code','embedded C','IoT / LoRaWAN'],
   languages: 'English: working proficiency, years of English-only daily standups. Czech: native.',
 
   cv: [
